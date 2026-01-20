@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Custom Theme Configuration for Tailwind v4 */
+@theme {
+  /* Backgrounds */
+  --color-background: #FAFAF8;
+  --color-background-alt: #f8f8f6;
+  --color-background-dark: #0F172A;
+  --color-background-dark-end: #1e293b;
+
+  /* Text */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #6b7280;
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-dark-muted: #94a3b8;
+
+  /* Accent */
+  --color-accent: #0EA5E9;
+  --color-accent-hover: #0284c7;
+  --color-accent-light: rgba(14, 165, 233, 0.1);
+
+  /* UI Elements */
+  --color-border: #e5e7eb;
+  --color-card: #FFFFFF;
+  --color-card-shadow: rgba(0, 0, 0, 0.08);
+
+  /* Font Families - using Tailwind's font stack pattern */
+  --font-heading: var(--font-lora), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-body: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+
+  /* Fluid Typography Scale */
+  --text-hero: clamp(2.5rem, 5vw, 4rem);
+  --text-h1: clamp(2rem, 4vw, 3rem);
+  --text-h2: clamp(1.5rem, 3vw, 2.25rem);
+  --text-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --text-body: clamp(1rem, 1.5vw, 1.125rem);
+  --text-small: clamp(0.875rem, 1vw, 0.9375rem);
+}
+
+/* Base Styles */
+:root {
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  line-height: var(--leading-normal);
+}
+
+/* Typography Base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-lora), ui-serif, Georgia, Cambria, serif;
+  line-height: var(--leading-tight);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus Styles for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Selection Color */
+::selection {
+  background: var(--color-accent);
+  color: white;
+}

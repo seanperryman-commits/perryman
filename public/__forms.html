@@ -1,0 +1,25 @@
+<!--
+  This file is required for Netlify Forms detection with @netlify/plugin-nextjs@5+
+  See: https://ntl.fyi/next-runtime-forms-migration
+  
+  This hidden form mirrors the structure of the dynamic React form in ContactForm.tsx
+  so that Netlify can detect the form fields at build time.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Netlify Forms Detection</title>
+  </head>
+  <body>
+    <form name="contact" netlify hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <select name="subject">
+        <option value="consulting">Consulting Inquiry</option>
+        <option value="speaking">Speaking Request</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
