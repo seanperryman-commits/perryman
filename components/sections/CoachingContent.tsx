@@ -72,15 +72,12 @@ const coachingAreas = [
   "Crisis response and communications",
 ];
 
-// TODO: ❌ "Google" and "World Economic Forum" have NO evidence - REMOVE
-// Featured venues (shared) - only first 4 are image-verified
+// Featured venues from fcopy.md
 const featuredVenues = [
-  "SXSW", // ✅ Verified: panel-sxsw.jpeg
-  "Georgetown Law", // ✅ Verified: panel-georgetown-ai.jpeg
-  "IAPP Privacy Summit", // ✅ Verified: panel-iapp-privacy.jpeg
-  "POLITICO", // ✅ Verified: panel-politico.jpeg
-  // "Google", // ❌ REMOVED - No evidence
-  // "World Economic Forum", // ❌ REMOVED - No evidence
+  "Vanderbilt AI Governance Symposium",
+  "Alianza In AI Conference",
+  "SXSW",
+  "AI Action Summit, Paris",
 ];
 
 function CoachingHero() {

@@ -4,12 +4,10 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/styles/animations";
 
 const featuredAt = [
+  "Vanderbilt AI Governance Symposium",
+  "Alianza In AI Conference",
   "SXSW",
   "AI Action Summit, Paris",
-  "Vanderbilt AI Symposium",
-  "Alianza In AI Conference",
-  "Georgetown Law",
-  "IAPP Privacy Summit",
 ];
 
 export function CredibilityStrip() {

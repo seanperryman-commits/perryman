@@ -93,6 +93,7 @@ export default function NewsletterPage() {
           </motion.div>
 
           {/* Themes Section */}
+            {/*
           <motion.div variants={fadeInUp} className="mt-12">
             <h3 className="text-center font-heading text-[length:var(--text-h3)] font-semibold text-text-primary">
               What to Expect
@@ -125,6 +126,7 @@ export default function NewsletterPage() {
               </div>
             </div>
           </motion.div>
+              */}
 
           {/* About Sean link */}
           <motion.div variants={fadeInUp} className="mt-12 text-center">

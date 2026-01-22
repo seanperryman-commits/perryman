@@ -10,7 +10,7 @@ export const mockupData = {
   hero: {
     name: "Sean Perryman",
     title: "Speaker. Consultant. Strategist.",
-    tagline: "Where AI Policy Meets Real-World Impact",
+    tagline: "Bridging AI Strategy, Policy, and Ethics",
     primaryCTA: "Schedule a Consultation",
     secondaryCTA: "View Speaking",
     image: "/images/headshots/sean-hero.jpg",
@@ -18,7 +18,7 @@ export const mockupData = {
   credibility: {
     title: "First Global Head of AI Policy at Uber",
     subtitle: "Former Congressional Counsel",
-    logos: ["Vanderbilt AI Symposium", "SXSW", "AI Action Summit", "POLITICO"],
+    logos: ["Vanderbilt AI Governance Symposium", "SXSW", "AI Action Summit"],
   },
   focusAreas: [
     {

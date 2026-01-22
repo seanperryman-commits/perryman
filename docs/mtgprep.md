@@ -1,324 +1,297 @@
-# Client Meeting Prep: Sean Perryman Site Review
+# Client Meeting Guide: Sean Perryman Site Walkthrough
 
-**Meeting Duration:** ~30 minutes
-**Goal:** Collect design feedback + identify content gaps to fill or delete
-
----
-
-## Meeting Agenda (30 min)
-
-| Time | Topic | Notes |
-|------|-------|-------|
-| 0-2 min | Quick intro | "Walk through the site, get your reactions, identify any content gaps" |
-| 2-12 min | Design walkthrough | Share screen, scroll through site, collect visceral reactions |
-| 12-22 min | Content audit | Go through placeholders—keep, replace, or delete? |
-| 22-28 min | Missing assets | Photos, URLs, contact info |
-| 28-30 min | Wrap up | Next steps, timeline |
+**Last Updated:** Jan 22, 2026
+**Build Status:** ✅ Passes (`npm run build` clean)
 
 ---
 
-## Part 1: Design Feedback Questions
+## Meeting Overview
 
-Walk through the homepage. Key questions:
+**Duration:** 30 minutes
+**Format:** Screenshare walkthrough
+**Goal:** Get design sign-off + decisions on placeholder content
 
-### Overall Feel
-- "Does this feel like **you**? Does it match how you want to be perceived?"
-- "Too corporate? Too casual? Just right?"
-- "Any competitors or peers whose sites you like/dislike?"
-
-### Hero Section
-- Dark navy background with photo on right—"First impression?"
-- "Speaker. Consultant. Strategist." tagline—accurate?
-- "Where AI Policy Meets Real-World Impact"—headline resonate?
-
-### Color & Typography
-- Navy blue (#0F172A) + sky blue accent (#0EA5E9)—work for you?
-- Lora (serif headings) + Nunito (body)—feel warm/authoritative enough?
-
-### Layout
-- Services order: Speaking → Consulting. Correct priority?
-- Testimonial section placement—important to you?
-- Dark "bookend" sections (hero + CTA)—feels cohesive?
+### Your Opening Line
+> "I'm going to walk you through the site page by page. As we go, I'll point out a few places where I've mocked up what certain elements could look like—stats, testimonials, that kind of thing. For each one, the question is: do you have real content to put there, or should I remove it entirely? No fake numbers, no fake quotes."
 
 ---
 
-## Part 2: Content Audit — Placeholder / Fabricated Content
+## Page-by-Page Walkthrough
 
-### 🟠 STATISTICS — Need Verification
-
-**Speaking Page:**
-| Stat | Current Value | Question |
-|------|---------------|----------|
-| Keynotes Delivered | 50+ | Accurate? |
-| Countries | 15+ | Accurate? |
-| Audience Members | 10K+ | Accurate? |
-
-**CTA Section (Homepage):**
-| Stat | Current Value | Question |
-|------|---------------|----------|
-| Organizations Advised | 50+ | Accurate? |
-| Years Experience | 10+ | (Matches "over a decade" in copy ✅) |
+Navigate in this order. For each page, I've noted what's real content (from your copy) vs. what's placeholder that needs a decision.
 
 ---
 
-### 🟡 TESTIMONIAL — Placeholder
+### 1. HOMEPAGE (`/`)
 
-**Current testimonial used site-wide:**
+**Sections on this page:** Hero → Credibility Strip → Services Preview → About Preview → Testimonial → Newsletter CTA → Final CTA
+
+#### ✅ Hero Section — GOOD TO GO
+| Element | Status | Notes |
+|---------|--------|-------|
+| "Sean Perryman" | ✅ Real | |
+| "Speaker. Consultant. Strategist." | ✅ Real | From your copy |
+| "Bridging AI Strategy, Policy, and Ethics" | ✅ Real | From your copy |
+| Credential chips | ✅ Real | "First Global Head of AI Policy at Uber", "Former Congressional Counsel" |
+| Photo | ⚠️ Placeholder | Using current headshot — is this the hero photo you want? |
+
+#### ✅ Credibility Strip — GOOD TO GO
+Shows: Vanderbilt AI Governance Symposium, Alianza In AI Conference, SXSW, AI Action Summit Paris
+**All from your copy — accurate?**
+
+#### ✅ Services Preview — GOOD TO GO
+Shows Speaking + Consulting cards. Links work.
+
+#### ✅ About Preview — GOOD TO GO
+Bio text from your copy.
+
+---
+
+#### 🟡 TESTIMONIAL — PLACEHOLDER (Decision Needed)
+
+**What client sees:**
 > "Sean's guidance was instrumental in shaping our AI governance strategy. His ability to translate complex policy considerations into actionable frameworks helped us move confidently into AI adoption while maintaining stakeholder trust."
 > — **J. Smith**, Technology Executive, Enterprise Client
 
-**Question:** "Do you have a real testimonial we can use with permission? Name, title, company? If not, we can remove testimonial sections entirely."
+**This is fake.** "J. Smith" and "Enterprise Client" are obvious placeholders.
+
+**Ask:**
+> "This is what a testimonial could look like here. Do you have a real one with permission to use? If not, I'll remove this section entirely—no fake quotes."
+
+**Options:**
+- [ ] Provide real testimonial (name, title, company, quote)
+- [ ] Remove testimonial section from homepage
 
 ---
 
-### 🟡 COPY VERIFICATION
+#### 🟡 STATS — PLACEHOLDER (Decision Needed)
 
-**Credibility Line:**
-- Site: "First Global Head of AI Policy at Uber"
-- Copy.md: "First Global Head of AI & Fairness Policy at Uber"
-- **Difference:** "& Fairness" is missing. Which is accurate?
+**What client sees in CTA section:**
+- **50+** Organizations Advised
+- **10+** Years Experience
 
----
+**"10+ Years" matches "over a decade" from your copy — that's fine.**
 
-### ✅ 7 CORE OFFERINGS — Implemented
+**"50+ Organizations" — is this accurate?**
 
-The Consulting page includes all 7 service areas from your copy. Minor title variations:
+**Ask:**
+> "Is 50+ organizations advised accurate? If you have a real number, I'll use it. If not, I can remove the stat entirely."
 
-| Copy.md | Site | Match |
-|---------|------|-------|
-| Building AI Governance | Building AI Governance | ✅ |
-| Strategy & Risk Assessment | Strategy & Risk Assessment | ✅ |
-| Policy Translation & Regulatory Intelligence | Policy Translation | ⚠️ Shortened |
-| Ethics Frameworks That Scale | Ethics Frameworks That Scale | ✅ |
-| Executive Education & Workshops | Executive Education & Workshops | ✅ |
-| Civil Rights & Impact Assessments | Civil Rights & Impact Assessments | ✅ |
-| Presentations & Keynotes | Expert Briefings | ⚠️ Different title |
-
-**Question:** "Are the shortened/changed titles acceptable, or do you prefer the exact wording from your original copy?"
+**Options:**
+- [ ] Confirm 50+ is accurate
+- [ ] Provide different number: ___
+- [ ] Remove stat, keep "10+ Years" only
 
 ---
 
-### ✅ NEWSLETTER PAGE — Already Built
+### 2. SPEAKING PAGE (`/services/public-speaking`)
 
-"The Human Cost" newsletter page exists at `/newsletter` with:
-- Title and tagline from copy ✅
-- Subscribe CTA (placeholder button—needs link to actual newsletter platform)
-- "What to Expect" section with themes
+**Sections:** Hero with stats → Credibility strip → Photo gallery → Speaking topics → CTA
 
-**Question:** "Where should the Subscribe button link? Substack? Beehiiv? Something else?"
+#### 🟡 STATS — PLACEHOLDER (Decision Needed)
 
----
+**What client sees in hero:**
+- **50+** Keynotes Delivered
+- **15+** Countries
+- **10K+** Audience Members
 
-### 🟡 SPEAKING PAGE — Topic Descriptions
+**None of these are in your copy. They're attention-grabbing but I made them up.**
 
-The **topic titles** are reasonable, but **descriptions are generic**:
+**Ask:**
+> "These stats are mockups of what this space could look like. Are any of these numbers accurate? I'd rather have smaller real numbers than impressive fake ones."
 
-| Topic | Current Description | From Copy? |
-|-------|---------------------|------------|
-| AI Governance & Ethics | "Frameworks for responsible AI deployment..." | Generic |
-| Global AI Policy | "Navigating the evolving international regulatory landscape..." | Generic |
-| Leadership in the AI Era | "Preparing executive teams to make confident decisions..." | Generic |
-| The Future of Work | "How AI will reshape industries..." | Generic |
-
-**Options:** 1) Provide real descriptions, 2) Keep generic, 3) Remove descriptions entirely and just show titles
+**Options:**
+- [ ] Provide real numbers: ___ keynotes, ___ countries, ___ audience members
+- [ ] Remove stats section entirely
 
 ---
 
-### 🟡 CASE STUDY — One Detail to Verify
+#### ✅ Credibility Strip — GOOD TO GO
+Same venues as homepage — from your copy.
 
-**AI Action Summit case study on Speaking page:**
-- Event name: AI Action Summit, Paris ✅ (from copy)
-- Description: Accurate ✅
-- Client/Organizer: **"Global Policy Forum"** — **Is this the actual organizer name?**
-
----
-
-## Part 2B: Minor Copy Deviations (Not Significant — FYI Only)
-
-These are small wording differences between copy.md and the site. Not worth discussing in the meeting unless client is detail-oriented. Just note where the content lives if changes are needed later.
-
-### About Page Intro Tagline
-- **File:** `app/about/page.tsx:71-72`
-- **Site:** "Bridging the gap between technological innovation and responsible governance to help organizations harness AI's potential."
-- **Copy:** No equivalent — this is fabricated filler
-- **Action:** Keep as-is or ask for real tagline
-
-### Congressional Detail (Minor Omission)
-- **File:** `app/about/page.tsx:126-130`
-- **Site:** "As Counsel to the late Congressman Elijah Cummings"
-- **Copy:** "As Counsel to the late Congressman Elijah Cummings on the House Oversight Committee"
-- **Note:** "on the House Oversight Committee" omitted. The career highlight card at line 27-29 includes full detail.
-
-### Speaking Engagements List — Events Added Beyond Copy
-- **File:** `components/sections/SpeakingContent.tsx:12-56`
-- **Copy lists:** Vanderbilt AI Governance Symposium, Alianza In AI Conference, SXSW, AI Action Summit Paris
-- **Site adds:** AI Leadership Summit (Bogota), POLITICO AI Summit, IAPP Privacy Summit, Georgetown AI Forum, CHCI Tech Summit
-- **Note:** These appear to be real events from the photos. Copy may just be outdated.
-
-### "Featured At" Venues — Minor Name Differences
-- **File:** `components/sections/CredibilityStrip.tsx:6-13`
-- **Copy:** "Vanderbilt AI Governance Symposium"
-- **Site:** "Vanderbilt AI Symposium"
-- **Also added to site:** Georgetown Law, IAPP Privacy Summit
-
-### "What You Get" Descriptions — Condensed
-- **File:** `components/sections/ConsultingContent.tsx:250-281`
-- Descriptions are slightly condensed from copy (e.g., "designing academic programs from scratch" → "designing academic programs")
-- **Note:** No meaning changed, just brevity
-
-### Client Types — Minor Additions
-- **File:** `components/sections/ConsultingContent.tsx:21-34`
-- **Copy:** "academic institution developing curriculum"
-- **Site:** "Academic Institutions - Developing curriculum and research frameworks"
-- **Note:** "research frameworks" added
-
-### Newsletter "What to Expect" Themes
-- **File:** `app/newsletter/page.tsx:100-126`
-- The four theme cards (Policy Analysis, Personal Essays, Critical Questions, Practical Insights) are not in copy.md
-- **Note:** These are reasonable fabrications that match the newsletter's described purpose
-
-### Bio Last Line (Intentionally Omitted)
-- **File:** N/A (not on site)
-- **Copy:** "He's based in the Washington D.C. area. He's an active member of the Northern Virginia commuter."
-- **Site:** Location not mentioned
-- **Note:** "Northern Virginia commuter" appears incomplete in copy — likely meant something else. Omitted from site.
+#### ✅ Photo Gallery — GOOD TO GO
+Real engagement photos. Captions describe actual events.
 
 ---
 
-## Part 3: Missing Assets Checklist
+#### 🟡 SPEAKING TOPICS — Generic Descriptions
 
-### Photos Needed
+**Current topics shown:**
+| Topic | Description |
+|-------|-------------|
+| AI Governance & Ethics | "Frameworks for responsible AI deployment..." |
+| Global AI Policy | "Navigating the evolving international regulatory landscape..." |
+| Leadership in the AI Era | "Preparing executive teams to make confident decisions..." |
+| The Future of Work | "How AI will reshape industries..." |
 
-| Photo | Purpose | Notes |
-|-------|---------|-------|
-| Hero headshot | Main homepage hero | Professional, high-res |
-| About photo | About section | Can be same as hero or different |
+**Topic titles are reasonable. Descriptions are generic filler.**
 
-**Question:** "Do you have professional photos ready, or do we need to arrange a shoot?"
+**Ask:**
+> "These topic titles feel right for your work. The descriptions are placeholder—do you want to provide real ones, or should I just show titles without descriptions?"
 
-### URLs & Contact Info
+**Options:**
+- [ ] Provide real descriptions
+- [ ] Keep titles only, remove descriptions
+- [ ] Keep as-is (generic is fine)
 
-| Item | Current Status | Question |
-|------|----------------|----------|
-| LinkedIn URL | Missing (just "linkedin.com") | Full profile URL? |
-| Twitter/X URL | Missing (just "x.com") | Full profile URL? Do you want X on the site? |
-| Email | hello@seanperryman.com | Correct? |
-| Calendly URL | Missing | Do you have one? Want scheduling on site? |
-| Newsletter platform | Button disabled | Substack/Beehiiv URL? |
+---
+
+### 3. CONSULTING PAGE (`/services/consulting`)
+
+**Sections:** Hero → Credibility strip → "What You Get" → Core Offerings → Case Study → CTA
+
+#### ✅ Everything on this page is from your copy — GOOD TO GO
+
+**What to verify:**
+- 7 Core Offerings match your copy (minor wording tweaks for brevity)
+- Uber case study is accurate
+- "Who I Work With" client types: Fortune 500, Startups, Academic Institutions
+
+**Quick sanity check:**
+> "This page pulls directly from your copy. Does anything feel off or need adjusting?"
+
+---
+
+### 4. NEWSLETTER PAGE (`/newsletter`)
+
+#### ✅ Content — GOOD TO GO
+"The Human Cost: AI's Impact on What Makes Us Human" — headline and description from your copy.
+
+---
+
+#### 🟡 SUBSCRIBE BUTTON — Not Connected
+
+**What client sees:** "Subscribe Now" button that does nothing, with "Newsletter platform coming soon" text below.
+
+**Ask:**
+> "Where does your newsletter live? Substack? Beehiiv? I need the URL to connect this button."
+
+**Options:**
+- [ ] Provide newsletter platform URL: ___
+- [ ] Remove subscribe button for now, add later
+
+---
+
+### 5. ABOUT PAGE (`/about`)
+
+#### ✅ Bio Content — GOOD TO GO
+Full bio from your copy. Career highlights, credentials, all accurate.
+
+**One small thing to verify:**
+> Site says "First Global Head of AI Policy at Uber"
+> Your copy says "First Global Head of AI & Fairness Policy at Uber"
+
+**Ask:**
+> "Should it include '& Fairness' in the title, or is 'AI Policy' sufficient?"
+
+---
+
+### 6. CONTACT PAGE (`/contact`)
+
+#### ✅ Form — GOOD TO GO
+Netlify form configured. Will work on launch.
+
+---
+
+#### 🟡 CALENDLY BUTTON — Not Connected
+
+**What client sees:** "Book a Call on Calendly" button that does nothing.
+
+**Ask:**
+> "Do you have a Calendly link? If so, I'll connect it. If not, I can remove the button."
+
+**Options:**
+- [ ] Provide Calendly URL: ___
+- [ ] Remove Calendly button
+
+---
+
+### 7. FOOTER (visible on all pages)
+
+#### 🟡 SOCIAL LINKS — Not Connected
+
+**What client sees:** LinkedIn and X icons that link to linkedin.com and x.com root (not profile pages).
+
+**Don't click these during demo — they go nowhere useful.**
+
+**Ask:**
+> "What are your LinkedIn and Twitter/X profile URLs? Or would you prefer I remove social links entirely?"
+
+**Options:**
+- [ ] LinkedIn URL: ___
+- [ ] X/Twitter URL: ___
+- [ ] Remove social links
+
+---
+
+#### 🟡 EMAIL — Needs Verification
+
+**Currently:** hello@seanperryman.com
+
+**Ask:**
+> "Is hello@seanperryman.com the right contact email?"
 
 ---
 
 ## Summary: Client Action Items
 
-After meeting, client needs to provide:
+### Must Decide Today
 
-### Must-Have (for launch):
-- [ ] Professional headshot(s)
-- [ ] LinkedIn profile URL
-- [ ] Email address confirmation
-- [ ] Stat verification (or decision to remove)
-- [ ] Newsletter platform URL
+| Item | Decision |
+|------|----------|
+| Testimonial | Provide real one OR remove |
+| Stats (50+ orgs) | Confirm OR provide real number OR remove |
+| Stats (speaking page) | Confirm OR provide real numbers OR remove |
+| Newsletter platform URL | Provide OR remove button |
+| Calendly URL | Provide OR remove button |
 
-### Nice-to-Have:
-- [ ] Real testimonial with attribution
-- [ ] Speaking topic descriptions (or approval of generic)
-- [ ] Twitter/X profile URL (or confirm removal)
-- [ ] Calendly URL (or confirm no scheduling)
-- [ ] AI Action Summit organizer name
+### Info to Send After Meeting
 
-### Design Sign-off:
-- [ ] Overall look/feel approval
-- [ ] Color palette approval
-- [ ] Typography approval
-- [ ] Services order/structure approval
+| Item | Status |
+|------|--------|
+| LinkedIn profile URL | Needed |
+| X/Twitter profile URL | Needed (or confirm removal) |
+| Email confirmation | hello@seanperryman.com correct? |
+| Hero photo | Confirm current OR provide new |
+| "& Fairness" in title | Include or omit? |
 
----
+### Optional / Nice-to-Have
 
-## Your Talking Points
-
-**Opening:**
-"I want to walk you through the site and get your gut reactions on the design direction. Then we'll go through a content checklist—there are some placeholders I need your input on, and some things where I adapted your copy but want to confirm it's accurate."
-
-**On Placeholders:**
-"I've clearly marked everything that's a placeholder. For each one, we can either: get the real info from you, write something new together, or delete the element entirely."
-
-**On Stats:**
-"These numbers are attention-grabbing but I don't want to publish anything you can't stand behind. Would you rather have accurate lower numbers or no numbers at all?"
-
-**On Testimonial:**
-"The testimonial is completely fake right now. If you have a real one with permission, great. If not, we remove it—no fake quotes."
-
-**On Service Titles:**
-"I made a couple minor tweaks to your original titles for brevity. Want to confirm those are okay or if you prefer the exact wording."
-
-**Closing:**
-"What I need from you after this call: photos, URLs, and decisions on the content gaps. Once I have those, we're very close to launch-ready."
+| Item | Notes |
+|------|-------|
+| Speaking topic descriptions | Currently generic — can provide real ones |
+| Real testimonial | If you have one with permission |
 
 ---
 
-## Quick Reference: Pages to Walk Through
+## Design Sign-Off Checklist
 
-1. **Homepage** — Hero, services preview, about preview, testimonial, CTA
-2. **Services > Speaking** — Stats, gallery, topics, CTA
-3. **Services > Consulting** — 7 offerings cards, case study, CTA
-4. **Newsletter** — The Human Cost page
-5. **Contact** — Form + Calendly placeholder
+At end of walkthrough, confirm:
+
+- [ ] Overall look and feel works
+- [ ] Navy blue + sky blue accent colors work
+- [ ] Lora (headings) + Nunito (body) fonts work
+- [ ] Speaking → Consulting priority order is correct
+- [ ] Dark "bookend" layout (dark hero, light middle, dark CTA) works
 
 ---
 
-## Pre-Meeting Audit: Site Readiness Checklist
+## Technical Notes (Don't Discuss Unless Asked)
 
-**Audit Date:** Jan 21, 2026
-**Build Status:** ✅ Passes (`npm run build` clean)
+**Site readiness:**
+- Build passes ✅
+- All pages load ✅
+- Navigation works ✅
+- Contact form configured ✅
+- Animations working ✅
+- Mobile responsive ✅
 
-### ✅ Ready for Walkthrough
+**Known visual things:**
+- Credential chips hidden on mobile (intentional — too cramped)
+- Hero photo stacks below text on mobile (intentional)
 
-| Item | Status | Notes |
-|------|--------|-------|
-| All pages load | ✅ | Homepage, About, Services, Speaking, Consulting, Newsletter, Contact |
-| Build passes | ✅ | No TypeScript or Next.js errors |
-| Images load | ✅ | All headshots + engagement photos present in `/public/images/` |
-| Contact form | ✅ | Netlify Forms configured correctly |
-| Navigation | ✅ | All internal links work |
-| Animations | ✅ | Framer Motion working, `once: true` set |
+---
 
-### ⚠️ Things Client Will See (Expected — In Meeting Prep)
+## Your Closing Line
 
-These are intentional placeholders already documented above:
-
-| Item | What They'll See | Where |
-|------|------------------|-------|
-| Testimonial | "J. Smith, Technology Executive, Enterprise Client" | Homepage testimonial section |
-| Stats | "50+ Keynotes", "15+ Countries", "10K+ Audience Members" | Speaking page hero |
-| Stats | "50+ Organizations Advised" | Homepage CTA section |
-| Social links | LinkedIn/X icons link to root domains | Footer |
-| Calendly | Button with no link | Contact page |
-| Newsletter | Subscribe button disabled | Newsletter page |
-
-### ⚠️ Things to Be Aware Of During Walkthrough
-
-1. **Testimonial is obviously fake** — "J. Smith" / "Enterprise Client" reads as placeholder. Be ready to explain this is intentional and waiting on real testimonial.
-
-2. **Social icons go nowhere useful** — They link to linkedin.com and x.com root, not profile pages. Don't click them during demo.
-
-3. **Calendly button is dead** — Contact page has a "Book a Call" button that does nothing. Mention this is waiting on client's Calendly URL.
-
-4. **Newsletter subscribe is placeholder** — Button exists but doesn't link anywhere yet.
-
-5. **Stats are prominent** — 50+ / 15+ / 10K+ are visible on Speaking page hero. Be prepared for "is that accurate?" question.
-
-### ✅ No Embarrassing Content
-
-- No "lorem ipsum" or "xxx" placeholders in production pages
-- No TODO comments visible in rendered HTML
-- No broken images
-- No console errors
-- No visible development warnings
-
-### Mobile Notes
-
-Site is responsive. On mobile walkthrough:
-- Hero photo stacks below text (intentional)
-- Credential chips hidden on mobile (intentional — they'd be cramped)
-- Navigation collapses to hamburger menu
-- All touch targets appropriately sized
+> "I need a few things from you after this call: decisions on the placeholder content we discussed, and the URLs I mentioned. Once I have those, we're launch-ready. Does next week work as a target?"

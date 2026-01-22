@@ -70,7 +70,7 @@ export function HeroSection() {
             <div className="relative w-full max-w-md lg:max-w-lg">
               {/* Floating credential chips */}
               <div className="absolute -left-8 top-12 z-10 hidden lg:block">
-                <CredentialChip>Global Head of AI Policy, Uber</CredentialChip>
+                <CredentialChip>First Global Head of AI Policy at Uber</CredentialChip>
               </div>
               <div className="absolute -right-8 bottom-32 z-10 hidden lg:block">
                 <CredentialChip>Former Congressional Counsel</CredentialChip>

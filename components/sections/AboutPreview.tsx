@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
 import { fadeInUp, slideInLeft, staggerContainer } from "@/styles/animations";
 import { Section } from "@/components/ui/Section";
 import { mockupData } from "@/app/mockups/_components/mockupData";
@@ -76,18 +75,17 @@ export function AboutPreview() {
             ))}
           </motion.div>
 
-          {/* Elevated Pull Quote */}
-          <motion.blockquote
+          {/* Highlighted Summary */}
+          <motion.div
             variants={fadeInUp}
-            className="relative mt-6 rounded-xl bg-background-dark/5 p-6"
+            className="mt-6 rounded-xl bg-background-dark/5 p-6"
           >
-            <Quote className="absolute -top-3 left-4 h-8 w-8 text-accent/30" />
-            <p className="pl-2 font-heading text-[length:var(--text-body)] italic leading-relaxed text-text-primary">
-              &ldquo;He translates congressional intent for engineers, explains
+            <p className="font-heading text-[length:var(--text-body)] leading-relaxed text-text-primary">
+              He translates congressional intent for engineers, explains
               technical constraints to policymakers, and helps executives understand
-              when ethical concerns are actually business risks in disguise.&rdquo;
+              when ethical concerns are actually business risks in disguise.
             </p>
-          </motion.blockquote>
+          </motion.div>
 
           <motion.div variants={fadeInUp} className="mt-6">
             <Link

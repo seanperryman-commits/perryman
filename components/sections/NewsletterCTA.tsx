@@ -28,7 +28,7 @@ export function NewsletterCTA() {
           variants={fadeInUp}
           className="mt-4 font-heading text-[length:var(--text-h2)] font-semibold text-text-primary"
         >
-          What AI Policy Discussions Miss
+          AI's Impact on What Makes Us Human
         </motion.h2>
 
         <motion.p

@@ -105,7 +105,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       title: "AI Action Summit, Paris", // ✅ Event is real (in copy)
       description:
         "Mainstage panelist at the Building Trustworthy AI session, addressing international leaders on governance frameworks.",
-      client: "Global Policy Forum", // TODO: ❌ FABRICATED - "Global Policy Forum" has no source, get real organizer name
+      client: "Building Trustworthy AI Panel",
     },
     cta: {
       headline: "Book Sean for Your Event",

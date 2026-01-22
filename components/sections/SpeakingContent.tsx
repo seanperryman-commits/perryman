@@ -86,12 +86,10 @@ const topics = [
 
 // Featured events/venues for credibility
 const featuredVenues = [
+  "Vanderbilt AI Governance Symposium",
+  "Alianza In AI Conference",
   "SXSW",
   "AI Action Summit, Paris",
-  "Vanderbilt AI Symposium",
-  "Alianza In AI Conference",
-  "Georgetown Law",
-  "IAPP Privacy Summit",
 ];
 
 export function SpeakingHero() {
