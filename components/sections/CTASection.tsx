@@ -41,26 +41,6 @@ export function CTASection() {
         variants={staggerContainer}
         className="relative mx-auto max-w-3xl text-center"
       >
-        {/* Trust indicators */}
-        {/* TODO: ⚠️ Stats need client verification */}
-        <motion.div
-          variants={fadeInUp}
-          className="mb-8 flex flex-wrap items-center justify-center gap-6 text-base text-white/60"
-        >
-          <div className="flex items-center gap-2">
-            {/* TODO: Verify "50+ Organizations" with client */}
-            <span className="font-semibold text-accent">50+</span>
-            <span>Organizations Advised</span>
-          </div>
-          <div className="hidden h-4 w-px bg-white/20 sm:block" />
-          <div className="flex items-center gap-2">
-            {/* ✅ Matches "over a decade" from copy */}
-            <span className="font-semibold text-accent">10+</span>
-            <span>Years Experience</span>
-          </div>
-          {/* ❌ REMOVED: "100% Client Satisfaction" - unverifiable claim */}
-        </motion.div>
-
         <motion.h2
           variants={fadeInUp}
           className="font-heading text-[length:var(--text-h1)] font-semibold text-white"

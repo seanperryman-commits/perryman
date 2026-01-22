@@ -11,7 +11,7 @@ import { mockupData } from "@/app/mockups/_components/mockupData";
 const credentials = [
   { value: "10+", label: "Years in AI Policy" }, // ✅ Matches "over a decade" in copy
   { value: "Uber", label: "Global Head of AI Policy" }, // ✅ Confirmed
-  { value: "Congress", label: "Former Counsel" }, // ✅ Confirmed
+  { value: "Oversight Committee", label: "Former Counsel" }, // ✅ Confirmed
 ];
 
 export function AboutPreview() {
@@ -81,7 +81,7 @@ export function AboutPreview() {
             className="mt-6 rounded-xl bg-background-dark/5 p-6"
           >
             <p className="font-heading text-[length:var(--text-body)] leading-relaxed text-text-primary">
-              He translates congressional intent for engineers, explains
+              He translates legislative intent for engineers, explains
               technical constraints to policymakers, and helps executives understand
               when ethical concerns are actually business risks in disguise.
             </p>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Linkedin, Twitter, Mail } from "lucide-react";
+import { Linkedin, Twitter } from "lucide-react";
 import { NAV_ITEMS, SOCIAL_LINKS, SITE_CONFIG } from "@/lib/constants";
 
 const socialIcons = {
@@ -40,15 +40,8 @@ export function Footer() {
             ))}
           </nav>
 
-          {/* Contact & Social */}
+          {/* Social */}
           <div className="flex flex-col items-center gap-4 md:items-end">
-            <a
-              href={`mailto:${SITE_CONFIG.email}`}
-              className="flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-accent"
-            >
-              <Mail className="h-4 w-4" />
-              {SITE_CONFIG.email}
-            </a>
             <div className="flex items-center gap-4">
               {SOCIAL_LINKS.map((social) => {
                 const Icon = socialIcons[social.icon];

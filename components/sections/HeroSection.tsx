@@ -73,7 +73,7 @@ export function HeroSection() {
                 <CredentialChip>First Global Head of AI Policy at Uber</CredentialChip>
               </div>
               <div className="absolute -right-8 bottom-32 z-10 hidden lg:block">
-                <CredentialChip>Former Congressional Counsel</CredentialChip>
+                <CredentialChip>Oversight Committee Former Counsel</CredentialChip>
               </div>
 
               {/* Photo with soft shadow */}

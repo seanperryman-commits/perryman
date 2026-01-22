@@ -479,10 +479,10 @@ export function ConsultingContent() {
   return (
     <>
       <ConsultingHero />
-      <CredibilityStrip />
+      {/* <CredibilityStrip /> */}
       <ProcessSection />
       <OfferingsSection />
-      <CaseStudySection />
+      {/* <CaseStudySection /> */}
       <ConsultingCTA />
     </>
   );

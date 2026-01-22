@@ -31,7 +31,7 @@ export const SOCIAL_LINKS = [
 
 export const SITE_CONFIG = {
   name: "Sean Perryman",
-  title: "AI Policy & Governance Advisor",
+  title: "Speaker. Consultant. Strategist.",
   email: "hello@seanperryman.com", // TODO: Verify correct email with client
 } as const;
 

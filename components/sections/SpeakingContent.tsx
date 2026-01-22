@@ -138,36 +138,6 @@ export function SpeakingHero() {
                 <Button size="lg">Book Sean for Your Event</Button>
               </Link>
             </motion.div>
-
-            {/* Quick stats */}
-            {/* TODO: ⚠️ ALL STATS BELOW need client verification - no source in copy */}
-            <motion.div
-              variants={fadeInUp}
-              className="mt-10 flex flex-wrap gap-8 border-t border-white/10 pt-8"
-            >
-              <div>
-                <span className="block font-heading text-3xl font-bold text-white">
-                  50+ {/* TODO: Verify with client */}
-                </span>
-                <span className="text-sm text-text-on-dark-muted">
-                  Keynotes Delivered
-                </span>
-              </div>
-              <div>
-                <span className="block font-heading text-3xl font-bold text-white">
-                  15+ {/* TODO: Verify with client */}
-                </span>
-                <span className="text-sm text-text-on-dark-muted">Countries</span>
-              </div>
-              <div>
-                <span className="block font-heading text-3xl font-bold text-white">
-                  10K+ {/* TODO: Verify with client */}
-                </span>
-                <span className="text-sm text-text-on-dark-muted">
-                  Audience Members
-                </span>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Featured Image - Right Side */}
@@ -181,7 +151,7 @@ export function SpeakingHero() {
               {/* Main keynote image */}
               <div className="relative aspect-square overflow-hidden rounded-lg shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
                 <Image
-                  src="/images/engagements/keynote-bogota.jpeg"
+                  src="/images/engagements/keynote-featured.jpg"
                   alt="Sean Perryman delivering keynote"
                   fill
                   className="object-cover"
@@ -428,9 +398,9 @@ export function SpeakingContent() {
   return (
     <>
       <SpeakingHero />
-      <CredibilityStrip />
-      <EngagementGallery />
-      <SpeakingTopics />
+      {/* <CredibilityStrip /> */}
+      {/* <EngagementGallery /> */}
+      {/* <SpeakingTopics /> */}
       <SpeakingCTA />
     </>
   );

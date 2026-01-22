@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { CredibilityStrip } from "@/components/sections/CredibilityStrip";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { AboutPreview } from "@/components/sections/AboutPreview";
-import { TestimonialSection } from "@/components/sections/TestimonialSection";
+// import { TestimonialSection } from "@/components/sections/TestimonialSection";
 import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
 import { CTASection } from "@/components/sections/CTASection";
 
@@ -13,7 +13,7 @@ export default function HomePage() {
       <CredibilityStrip />
       <ServicesSection />
       <AboutPreview />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       <NewsletterCTA />
       <CTASection />
     </>

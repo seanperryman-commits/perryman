@@ -13,7 +13,7 @@ export const mockupData = {
     tagline: "Bridging AI Strategy, Policy, and Ethics",
     primaryCTA: "Schedule a Consultation",
     secondaryCTA: "View Speaking",
-    image: "/images/headshots/sean-hero.jpg",
+    image: "/images/headshots/sean-about.jpg",
   },
   credibility: {
     title: "First Global Head of AI Policy at Uber",
@@ -48,7 +48,7 @@ export const mockupData = {
   ],
   about: {
     bio: "Sean Perryman works at the intersection of AI policy, corporate strategy, and ethical implementation—helping organizations navigate one of the most consequential technology transitions of our time. His career spans Capitol Hill, Silicon Valley, and law school classrooms. He translates congressional intent for engineers, explains technical constraints to policymakers, and helps executives understand when ethical concerns are actually business risks in disguise.",
-    image: "/images/headshots/sean-about.jpg",
+    image: "/images/headshots/sean-hero.jpg",
   },
   // TODO: ❌ PLACEHOLDER TESTIMONIAL - Need real testimonial from client
   // Current content: "J. Smith", "Technology Executive", "Enterprise Client" are all fake
