@@ -22,6 +22,7 @@ export default function HomePage() {
         src="/images/engagements/panel-georgetown-ai.jpeg"
         alt="Sean Perryman at Georgetown AI Forum"
         caption="Georgetown AI Forum"
+        objectPosition="center 11%"
       />
       <NewsletterCTA />
       <CTASection />

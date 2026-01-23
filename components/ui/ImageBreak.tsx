@@ -8,9 +8,11 @@ interface ImageBreakProps {
   src: string;
   alt: string;
   caption?: string;
+  /** CSS object-position value (e.g., "center", "top", "bottom", "center 30%") */
+  objectPosition?: string;
 }
 
-export function ImageBreak({ src, alt, caption }: ImageBreakProps) {
+export function ImageBreak({ src, alt, caption, objectPosition = "center" }: ImageBreakProps) {
   return (
     <motion.div
       initial="hidden"
@@ -25,6 +27,7 @@ export function ImageBreak({ src, alt, caption }: ImageBreakProps) {
           alt={alt}
           fill
           className="object-cover"
+          style={{ objectPosition }}
           quality={95}
           sizes="100vw"
           priority
@@ -33,7 +36,7 @@ export function ImageBreak({ src, alt, caption }: ImageBreakProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
       </div>
       {caption && (
-        <p className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white/90 px-4 py-1.5 text-sm font-medium text-text-primary shadow-lg backdrop-blur-sm">
+        <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm font-medium text-white/90 drop-shadow-lg">
           {caption}
         </p>
       )}

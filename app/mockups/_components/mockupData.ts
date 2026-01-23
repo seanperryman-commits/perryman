@@ -9,10 +9,10 @@
 export const mockupData = {
   hero: {
     name: "Sean Perryman",
-    title: "Speaker. Consultant. Strategist.",
-    tagline: "Bridging AI Strategy, Policy, and Ethics",
+    title: "Speaker. Consultant. Coach.",
+    tagline: "AI Strategy, Policy, and Ethics",
     primaryCTA: "Schedule a Consultation",
-    secondaryCTA: "View Speaking",
+    secondaryCTA: "Learn More",
     image: "/images/headshots/sean-hero.jpg",
   },
   credibility: {

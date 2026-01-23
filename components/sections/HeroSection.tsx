@@ -26,21 +26,21 @@ export function HeroSection() {
           >
             <motion.p
               variants={fadeInUp}
-              className="mb-6 text-base font-medium text-text-muted"
+              className="mb-4 text-lg font-medium text-white/70"
             >
-              {hero.title}
+              {hero.name}
             </motion.p>
 
             <motion.h1
               variants={fadeInUp}
               className="font-heading text-[length:calc(var(--text-hero)*1.1)] font-black leading-tight tracking-tight text-white"
             >
-              {hero.name}
+              {hero.title}
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="mt-8 max-w-[480px] text-lg leading-relaxed text-text-on-dark-muted"
+              className="mt-8 max-w-[480px] text-lg leading-relaxed text-white/80"
             >
               {hero.tagline}
             </motion.p>
@@ -52,7 +52,7 @@ export function HeroSection() {
               <Link href="/contact">
                 <Button size="lg">{hero.primaryCTA}</Button>
               </Link>
-              <Link href="/services/public-speaking">
+              <Link href="/services">
                 <Button variant="secondary" size="lg" onDark>
                   {hero.secondaryCTA}
                 </Button>

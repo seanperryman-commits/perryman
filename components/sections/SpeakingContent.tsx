@@ -388,20 +388,20 @@ export function SpeakingCTA() {
         className="mx-auto max-w-4xl"
       >
         <div className="overflow-hidden rounded-2xl bg-background-dark shadow-2xl">
-          <div className="grid lg:grid-cols-2">
-            {/* Image side */}
-            <div className="relative hidden aspect-square lg:block">
+          <div className="grid lg:grid-cols-5">
+            {/* Image side - takes 2 of 5 columns */}
+            <div className="relative hidden overflow-hidden lg:col-span-2 lg:block">
               <Image
                 src="/images/engagements/panel-igg23.jpeg"
                 alt="Sean Perryman at international governance forum"
                 fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 0vw, 400px"
+                className="scale-110 object-cover object-[60%_center]"
+                sizes="(max-width: 1024px) 0vw, 320px"
               />
             </div>
 
-            {/* Content side */}
-            <div className="flex flex-col justify-center p-8 lg:p-12">
+            {/* Content side - takes 3 of 5 columns */}
+            <div className="flex flex-col justify-center p-8 lg:col-span-3 lg:p-12">
               <motion.h2
                 variants={fadeInUp}
                 className="font-heading text-[length:var(--text-h2)] font-semibold text-white"

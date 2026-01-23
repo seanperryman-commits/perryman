@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { fadeIn } from "@/styles/animations";
 
 const featuredAt = [
@@ -33,6 +35,13 @@ export function CredibilityStrip() {
                 {venue}
               </span>
             ))}
+            <Link
+              href="/services/public-speaking"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-accent transition-colors hover:text-accent-hover"
+            >
+              View Speaking
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </motion.div>

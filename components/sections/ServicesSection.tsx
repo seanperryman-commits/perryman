@@ -23,8 +23,8 @@ const serviceDescriptions: Record<string, string> = {
 };
 
 const serviceCTAs: Record<string, string> = {
-  "public-speaking": "View Speaking",
-  "consulting": "Explore Services",
+  "public-speaking": "Learn More",
+  "consulting": "Learn More",
   "coaching": "Learn More",
 };
 
@@ -45,15 +45,15 @@ export function ServicesSection() {
           />
         </motion.div>
 
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 items-stretch gap-8 md:grid-cols-3">
           {SERVICES.map((service, index) => {
             const Icon = iconMap[service.icon as keyof typeof iconMap];
             const cardNumber = String(index + 1).padStart(2, "0");
             return (
-              <motion.div key={service.slug} variants={fadeInUp}>
-                <Link href={`/services/${service.slug}`} className="group block">
+              <motion.div key={service.slug} variants={fadeInUp} className="h-full">
+                <Link href={`/services/${service.slug}`} className="group block h-full">
                   <article
-                    className="h-full overflow-hidden rounded-lg bg-accent p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    className="flex h-full flex-col overflow-hidden rounded-lg bg-accent p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                   >
                     <div className="mb-6 flex items-center justify-between">
                       <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/20 text-white shadow-md">
@@ -66,7 +66,7 @@ export function ServicesSection() {
                     <h3 className="font-heading text-[length:var(--text-h3)] font-semibold text-white">
                       {service.label}
                     </h3>
-                    <p className="mt-4 text-[length:var(--text-body)] leading-relaxed text-white/80">
+                    <p className="mt-4 flex-1 text-[length:var(--text-body)] leading-relaxed text-white/80">
                       {serviceDescriptions[service.slug]}
                     </p>
                     <span className="mt-6 inline-flex items-center text-sm font-semibold text-white transition-colors group-hover:text-white/80">

@@ -70,15 +70,15 @@ export default function ServicesPage() {
               },
             },
           }}
-          className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3"
+          className="mx-auto grid max-w-5xl items-stretch gap-8 md:grid-cols-3"
         >
           {SERVICES.map((service) => {
             const Icon = iconMap[service.icon];
             return (
-              <motion.div key={service.slug} variants={fadeInUp}>
+              <motion.div key={service.slug} variants={fadeInUp} className="h-full">
                 <Link
                   href={`/services/${service.slug}`}
-                  className="group block h-full rounded-xl bg-card p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  className="group flex h-full flex-col rounded-xl bg-card p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
                   <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-accent/10">
                     <Icon className="h-7 w-7 text-accent" />
@@ -86,7 +86,7 @@ export default function ServicesPage() {
                   <h3 className="mb-3 font-heading text-[length:var(--text-h3)] font-semibold text-text-primary">
                     {service.label}
                   </h3>
-                  <p className="mb-6 text-[length:var(--text-body)] leading-relaxed text-text-secondary">
+                  <p className="mb-6 flex-1 text-[length:var(--text-body)] leading-relaxed text-text-secondary">
                     {serviceDescriptions[service.slug]}
                   </p>
                   <span className="inline-flex items-center gap-2 text-accent transition-transform group-hover:translate-x-1">
