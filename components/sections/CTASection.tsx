@@ -52,24 +52,15 @@ export function CTASection() {
           variants={fadeInUp}
           className="mt-6 text-[length:var(--text-body)] text-white/70"
         >
-          Ready to navigate AI policy with confidence? Let&apos;s discuss how I can
-          help your organization lead responsibly.
+          Whether you need strategic guidance on AI governance, executive education 
+          for your team, or a speaker who can make complex policy accessible, 
+          Sean brings a practitioner&apos;'s perspective to every engagement.
         </motion.p>
 
         <motion.div variants={fadeInUp} className="mt-8">
           <Link href="/contact">
             <Button size="lg">Get in Touch</Button>
           </Link>
-          {/* TODO: Verify correct email with client (was sean@, now hello@ to match constants.ts) */}
-          <p className="mt-4 text-sm text-white/50">
-            or{" "}
-            <a
-              href="mailto:hello@seanperryman.com"
-              className="text-white/70 underline underline-offset-2 transition-colors hover:text-white"
-            >
-              email me directly
-            </a>
-          </p>
         </motion.div>
       </motion.div>
     </Section>

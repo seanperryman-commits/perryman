@@ -26,13 +26,6 @@ const engagements = [
     type: "Panel",
   },
   {
-    src: "/images/engagements/panel-politico.jpeg",
-    alt: "Sean Perryman at POLITICO AI Summit",
-    event: "POLITICO AI Summit",
-    location: "Washington, DC",
-    type: "Panel",
-  },
-  {
     src: "/images/engagements/panel-iapp-privacy.jpeg",
     alt: "Sean Perryman at IAPP Privacy Summit",
     event: "IAPP Privacy Summit",
@@ -358,7 +351,7 @@ export function SpeakingMain() {
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg shadow-xl">
               <Image
                 src="/images/engagements/panel-iapp-privacy.jpeg"
-                alt="Sean Perryman at IAPP Privacy Forum"
+                alt="Sean Perryman at IAPP Privacy Summit"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -366,7 +359,7 @@ export function SpeakingMain() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <p className="font-heading text-sm font-semibold text-white">
-                  IAPP Privacy Forum
+                  IAPP Privacy Summit
                 </p>
               </div>
             </div>

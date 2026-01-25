@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/sections/HeroSection";
 import { CredibilityStrip } from "@/components/sections/CredibilityStrip";
+import { ValueProposition } from "@/components/sections/ValueProposition";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { AboutPreview } from "@/components/sections/AboutPreview";
 import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
@@ -11,19 +12,18 @@ export default function HomePage() {
     <>
       <HeroSection />
       <CredibilityStrip />
+      <ValueProposition />
       <ImageBreak
         src="/images/engagements/panel-sxsw.jpeg"
         alt="Sean Perryman at SXSW AI Standards panel"
-        caption="SXSW"
         objectPosition="center 40%"
       />
       <ServicesSection />
       <AboutPreview />
       <ImageBreak
-        src="/images/engagements/panel-chci-tech.jpeg"
-        alt="Sean Perryman at Georgetown AI Forum"
-        caption="Georgetown AI Forum"
-        objectPosition="center 11%"
+        src="/images/engagements/panel-trustworthy-ai.jpeg"
+        alt="Sean Perryman on Building Trustworthy AI panel at Paris AI Action Summit"
+        objectPosition="center"
       />
       <NewsletterCTA />
       <CTASection />

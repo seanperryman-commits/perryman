@@ -15,7 +15,7 @@ const iconMap = {
 
 const serviceDescriptions: Record<string, string> = {
   "public-speaking":
-    "Cutting through AI hype to deliver strategic insight—from keynotes at major conferences to executive briefings that leaders describe as immediately actionable.",
+    "Cutting through AI hype to deliver strategic insight, from keynotes at major conferences to executive briefings that leaders describe as immediately actionable.",
   "consulting":
     "Translating complex AI policy into business strategy. Governance frameworks, risk assessment, regulatory intelligence, and ethics that scale.",
   "coaching":

@@ -36,7 +36,7 @@ export const SOCIAL_LINKS = [
 
 export const SITE_CONFIG = {
   name: "Sean Perryman",
-  title: "Speaker. Consultant. Strategist.",
+  title: "Speaker. Consultant. Strategist. Coach.",
   email: "hello@seanperryman.com", // TODO: Verify correct email with client
 } as const;
 
@@ -129,7 +129,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
         "From advising Congress on AI accountability to creating Uber's first EU algorithmic transparency report, Sean brings unusual breadth: policy expertise, strategic foresight, and hands-on implementation experience.",
         "Whether you're a Fortune 500 company navigating AI regulation, a startup building responsible systems from the ground up, or an academic institution developing curriculum, Sean translates complex policy into actionable strategy.",
       ],
-      image: "/images/engagements/panel-georgetown-ai_old.jpeg",
+      image: "/images/engagements/panel-georgetown-ai.jpeg",
     },
     features: [
       {

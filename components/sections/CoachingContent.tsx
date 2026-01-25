@@ -17,37 +17,30 @@ import { Button } from "@/components/ui/Button";
 // What We Work On - coaching offerings
 const offerings = [
   {
-    icon: Compass,
-    title: "Strategic Decision-Making in Ambiguity",
-    description:
-      "Million-dollar AI investments with incomplete information. We develop frameworks that help you move decisively while managing technical, regulatory, and reputational uncertainty.",
-  },
-  {
-    icon: Shield,
-    title: "Building Responsible AI Programs That Scale",
-    description:
-      "Beyond compliance theater. Design governance structures that enable innovation, translating fairness and transparency requirements into operational reality.",
-  },
-  {
     icon: Users,
     title: "Leading Through Technological Disruption",
     description:
       "Your team is anxious. Your board has questions. Your customers have concerns. We work on the human dimension of AI leadership—communicating uncertainty, building trust, making ethical calls when there's no clear answer.",
   },
   {
+    icon: Compass,
+    title: "Strategic Decision-Making in Ambiguity",
+    description:
+      "Million-dollar AI investments with incomplete information. We develop frameworks that help you move decisively while managing technical, regulatory, and reputational uncertainty.",
+  },
+  {
     icon: Target,
     title: "Personal Leadership Development",
     description:
-      "Leading at the intersection of technology and humanity requires holding technical complexity, regulatory nuance, ethical tensions, and human impact simultaneously. We develop that capacity.",
-  },
+      "We work to unblock professional and personal barriers that prevent you from reaching the next level of your career.",
+  }
 ];
 
 // Who This Is For
 const clientTypes = [
   "C-suite executives implementing AI strategy across their organizations",
-  "Chief AI Officers and VPs building responsible AI programs from scratch",
   "General Counsels and Policy Leaders translating regulation into competitive advantage",
-  "Founders and Senior Leaders at AI companies navigating growth and governance simultaneously",
+  "Founders, Executives, and Senior Leaders navigating personal and professional challenges and transitions in their career.",
 ];
 
 function CoachingHero() {
@@ -74,19 +67,10 @@ function CoachingHero() {
               variants={fadeInUp}
               className="font-heading text-[length:var(--text-h1)] font-bold leading-tight tracking-tight text-white"
             >
-              Navigate AI&apos;s Complexity
+              Coaching leaders and executives both
               <br />
-              <span className="text-accent">With Confidence</span>
+              <span className="text-accent">professionally and personally.</span>
             </motion.h1>
-
-            <motion.p
-              variants={fadeInUp}
-              className="mt-6 max-w-[520px] text-lg leading-relaxed text-text-on-dark-muted"
-            >
-              Lead with both innovation and integrity. One-on-one coaching for
-              executives navigating AI strategy, governance, and the human
-              dimension of technological leadership.
-            </motion.p>
 
             <motion.div variants={fadeInUp} className="mt-8 flex flex-wrap gap-4">
               <Link href="/contact">
@@ -141,13 +125,19 @@ function ProcessSection() {
               available for real-time challenges as they emerge.
             </p>
 
+              <p className="mt-4 text-[length:var(--text-body)] leading-relaxed text-text-secondary">
+              Group Coaching for groups of executives adopting, implementing with AI or managing teams through technological change.
+            </p>
+
             <p className="mt-6 text-[length:var(--text-body)] leading-relaxed text-text-secondary">
               As a certified executive coach with practitioner experience
               designing AI governance for global operations, advising Congress
               on algorithmic accountability, and teaching AI ethics at
               Vanderbilt Law, I bring both coaching methodology and hard-won
               expertise to leadership challenges that are fundamentally
-              unprecedented.
+              unprecedented. Also, as a leader and executive that has navigated 
+              personal and professional transitions, I work with you to acheive success
+              in the face of challenging changes.
             </p>
           </motion.div>
 
@@ -184,7 +174,7 @@ function OfferingsSection() {
           </h2>
         </motion.div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-3">
           {offerings.map((offering) => (
             <motion.div
               key={offering.title}
@@ -287,8 +277,8 @@ export function CoachingContent() {
   return (
     <>
       <CoachingHero />
-      <ProcessSection />
       <OfferingsSection />
+      <ProcessSection />
       <ClientTypesSection />
       <CoachingCTA />
     </>
