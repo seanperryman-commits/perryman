@@ -45,7 +45,7 @@ export function ServicesSection() {
           />
         </motion.div>
 
-        <div className="mx-auto grid max-w-5xl grid-cols-1 items-stretch gap-8 md:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 items-stretch gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
           {SERVICES.map((service, index) => {
             const Icon = iconMap[service.icon as keyof typeof iconMap];
             const cardNumber = String(index + 1).padStart(2, "0");
@@ -53,7 +53,7 @@ export function ServicesSection() {
               <motion.div key={service.slug} variants={fadeInUp} className="h-full">
                 <Link href={`/services/${service.slug}`} className="group block h-full">
                   <article
-                    className="flex h-full flex-col overflow-hidden rounded-lg bg-accent p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    className="flex h-full flex-col overflow-hidden rounded-lg bg-accent p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8"
                   >
                     <div className="mb-6 flex items-center justify-between">
                       <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/20 text-white shadow-md">

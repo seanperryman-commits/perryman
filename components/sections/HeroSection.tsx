@@ -16,7 +16,7 @@ export function HeroSection() {
       {/* Subtle radial glow behind image area */}
       <div className="pointer-events-none absolute right-0 top-1/2 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/4 rounded-full bg-accent/5 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-6 md:px-8">
-        <div className="flex min-h-[90vh] flex-col items-center gap-12 py-24 lg:flex-row lg:items-center lg:py-0">
+        <div className="flex min-h-[90vh] flex-col items-center gap-8 py-24 sm:gap-10 lg:flex-row lg:items-center lg:gap-12 lg:py-0">
           {/* Text Content - Left Side */}
           <motion.div
             className="flex flex-1 flex-col justify-center lg:py-20"

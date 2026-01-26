@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-6 py-12 md:px-8 md:py-14">
-        <div className="grid gap-10 md:grid-cols-3 md:gap-8">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
           {/* Brand Column */}
           <div className="text-center md:text-left">
             <Link

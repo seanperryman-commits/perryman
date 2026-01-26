@@ -51,7 +51,7 @@ export function ContactForm() {
       data-netlify="true"
       netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
-      className="space-y-6"
+      className="space-y-4 sm:space-y-5 md:space-y-6"
     >
       <input type="hidden" name="form-name" value="contact" />
       <p className="hidden">

@@ -130,7 +130,7 @@ export function Header() {
         {/* Mobile Menu Button */}
         <button
           ref={toggleButtonRef}
-          className="flex h-10 w-10 items-center justify-center md:hidden"
+          className="flex h-11 w-11 items-center justify-center md:hidden"
           onClick={toggle}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
