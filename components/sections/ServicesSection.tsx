@@ -6,21 +6,13 @@ import { Mic, Briefcase, UserCheck } from "lucide-react";
 import { fadeInUp, staggerContainer } from "@/styles/animations";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { SERVICES } from "@/lib/constants";
+import { SERVICE_DESCRIPTIONS } from "@/lib/content";
 
 const iconMap = {
   mic: Mic,
   briefcase: Briefcase,
   "user-check": UserCheck,
 } as const;
-
-const serviceDescriptions: Record<string, string> = {
-  "public-speaking":
-    "Cutting through AI hype to deliver strategic insight, from keynotes at major conferences to executive briefings that leaders describe as immediately actionable.",
-  "consulting":
-    "Translating complex AI policy into business strategy. Governance frameworks, risk assessment, regulatory intelligence, and ethics that scale.",
-  "coaching":
-    "One-on-one executive coaching for leaders navigating AI strategy, governance decisions, and organizational transformation.",
-};
 
 const serviceCTAs: Record<string, string> = {
   "public-speaking": "Learn More",
@@ -67,7 +59,7 @@ export function ServicesSection() {
                       {service.label}
                     </h3>
                     <p className="mt-4 flex-1 text-[length:var(--text-body)] leading-relaxed text-white/80">
-                      {serviceDescriptions[service.slug]}
+                      {SERVICE_DESCRIPTIONS[service.slug as keyof typeof SERVICE_DESCRIPTIONS]}
                     </p>
                     <span className="mt-6 inline-flex items-center text-sm font-semibold text-white transition-colors group-hover:text-white/80">
                       {serviceCTAs[service.slug]}

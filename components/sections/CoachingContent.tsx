@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Compass, Shield, Users, Target, CheckCircle } from "lucide-react";
+import { Compass, Users, Target, CheckCircle } from "lucide-react";
 import {
   fadeInUp,
   staggerContainer,
@@ -13,35 +13,13 @@ import {
 } from "@/styles/animations";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
+import { COACHING_OFFERINGS, COACHING_CLIENT_TYPES } from "@/lib/content";
 
-// What We Work On - coaching offerings
-const offerings = [
-  {
-    icon: Users,
-    title: "Leading Through Technological Disruption",
-    description:
-      "Your team is anxious. Your board has questions. Your customers have concerns. We work on the human dimension of AI leadership—communicating uncertainty, building trust, making ethical calls when there's no clear answer.",
-  },
-  {
-    icon: Compass,
-    title: "Strategic Decision-Making in Ambiguity",
-    description:
-      "Million-dollar AI investments with incomplete information. We develop frameworks that help you move decisively while managing technical, regulatory, and reputational uncertainty.",
-  },
-  {
-    icon: Target,
-    title: "Personal Leadership Development",
-    description:
-      "We work to unblock professional and personal barriers that prevent you from reaching the next level of your career.",
-  }
-];
-
-// Who This Is For
-const clientTypes = [
-  "C-suite executives implementing AI strategy across their organizations",
-  "General Counsels and Policy Leaders translating regulation into competitive advantage",
-  "Founders, Executives, and Senior Leaders navigating personal and professional challenges and transitions in their career.",
-];
+const iconMap = {
+  Users,
+  Compass,
+  Target,
+} as const;
 
 function CoachingHero() {
   return (
@@ -174,14 +152,16 @@ function OfferingsSection() {
         </motion.div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {offerings.map((offering) => (
+          {COACHING_OFFERINGS.map((offering) => {
+            const Icon = iconMap[offering.iconName];
+            return (
             <motion.div
               key={offering.title}
               variants={scaleUp}
               className="group rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md"
             >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
-                <offering.icon className="h-6 w-6" />
+                <Icon className="h-6 w-6" />
               </div>
               <h3 className="font-heading text-lg font-semibold text-text-primary">
                 {offering.title}
@@ -190,7 +170,8 @@ function OfferingsSection() {
                 {offering.description}
               </p>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </motion.div>
     </Section>
@@ -214,7 +195,7 @@ function ClientTypesSection() {
         </motion.div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          {clientTypes.map((client) => (
+          {COACHING_CLIENT_TYPES.map((client) => (
             <motion.div
               key={client}
               variants={fadeInUp}

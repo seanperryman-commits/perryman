@@ -5,11 +5,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/styles/animations";
 import { Button } from "@/components/ui/Button";
-import { CredentialChip } from "@/components/ui/CredentialChip";
-import { mockupData } from "@/app/mockups/_components/mockupData";
+// CredentialChip import commented out - chips are disabled in hero
+// import { CredentialChip } from "@/components/ui/CredentialChip";
+import { HERO_CONTENT } from "@/lib/content";
 
 export function HeroSection() {
-  const { hero } = mockupData;
+  const hero = HERO_CONTENT;
 
   return (
     <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-br from-background-dark via-background-dark-end to-background-dark text-white">

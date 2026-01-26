@@ -5,10 +5,11 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeInUp, slideInLeft, staggerContainer } from "@/styles/animations";
 import { Section } from "@/components/ui/Section";
-import { mockupData } from "@/app/mockups/_components/mockupData";
+import { ABOUT_CONTENT, HERO_CONTENT } from "@/lib/content";
 
 export function AboutPreview() {
-  const { about, hero } = mockupData;
+  const about = ABOUT_CONTENT;
+  const hero = HERO_CONTENT;
 
   return (
     <Section background="light" padding="lg">

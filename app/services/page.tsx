@@ -7,22 +7,13 @@ import { fadeInUp, staggerContainer, slideInRight } from "@/styles/animations";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { SERVICES } from "@/lib/constants";
+import { SERVICE_DESCRIPTIONS } from "@/lib/content";
 
 // Map icon strings to Lucide components
 const iconMap: Record<string, LucideIcon> = {
   mic: Mic,
   briefcase: Briefcase,
   "user-check": UserCheck,
-};
-
-// Service descriptions for the cards
-const serviceDescriptions: Record<string, string> = {
-  "public-speaking":
-    "Cutting through AI hype to deliver strategic insight—from keynotes at major conferences to executive briefings that audiences describe as immediately actionable.",
-  "consulting":
-    "Translating complex AI policy into business strategy. Governance frameworks, risk assessment, regulatory intelligence, and ethics that scale.",
-  "coaching":
-    "One-on-one executive coaching for leaders navigating AI strategy, governance decisions, and organizational transformation.",
 };
 
 export default function ServicesPage() {
@@ -87,7 +78,7 @@ export default function ServicesPage() {
                     {service.label}
                   </h3>
                   <p className="mb-6 flex-1 text-[length:var(--text-body)] leading-relaxed text-text-secondary">
-                    {serviceDescriptions[service.slug]}
+                    {SERVICE_DESCRIPTIONS[service.slug as keyof typeof SERVICE_DESCRIPTIONS]}
                   </p>
                   <span className="inline-flex items-center gap-2 text-accent transition-transform group-hover:translate-x-1">
                     Learn More

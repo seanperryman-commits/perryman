@@ -42,7 +42,7 @@ export const SITE_CONFIG = {
 
 // Service Detail Page Content
 export interface ServiceFeature {
-  icon: "presentation" | "users" | "target" | "lightbulb" | "shield" | "chart" | "compass" | "rocket" | "handshake" | "brain" | "clock" | "award";
+  icon: "presentation" | "users" | "target" | "lightbulb" | "shield" | "chart" | "compass" | "rocket" | "handshake" | "brain" | "clock" | "award" | "mic" | "briefcase" | "user-check";
   title: string;
   description: string;
 }
@@ -168,6 +168,57 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       subtext:
         "Get strategic guidance on AI governance, executive education for your team, or help making complex policy accessible.",
       buttonText: "Start a Conversation",
+    },
+  },
+  coaching: {
+    heroSubtitle:
+      "Coaching leaders and executives both professionally and personally through technological disruption and personal growth.",
+    overview: {
+      title: "How We Work",
+      paragraphs: [
+        "1:1 coaching engagements typically run 3-6 months with biweekly sessions. Between sessions, you're implementing—I'm available for real-time challenges as they emerge.",
+        "Group Coaching for groups of executives adopting, implementing with AI or managing teams through technological change.",
+        "As a certified executive coach with practitioner experience designing AI governance for global operations, advising Congress on algorithmic accountability, and teaching AI ethics at Vanderbilt Law, I bring both coaching methodology and hard-won expertise to leadership challenges that are fundamentally unprecedented.",
+      ],
+      image: "/images/headshots/sean-about.jpg",
+    },
+    features: [
+      {
+        icon: "users",
+        title: "Leading Through Technological Disruption",
+        description:
+          "Work on the human dimension of AI leadership—communicating uncertainty, building trust, making ethical calls when there's no clear answer.",
+      },
+      {
+        icon: "compass",
+        title: "Strategic Decision-Making in Ambiguity",
+        description:
+          "Develop frameworks that help you move decisively while managing technical, regulatory, and reputational uncertainty.",
+      },
+      {
+        icon: "target",
+        title: "Personal Leadership Development",
+        description:
+          "Unblock professional and personal barriers that prevent you from reaching the next level of your career.",
+      },
+      {
+        icon: "brain",
+        title: "AI Strategy Navigation",
+        description:
+          "Navigate million-dollar AI investments with incomplete information and develop confident decision-making approaches.",
+      },
+    ],
+    caseStudy: {
+      title: "Executive Coaching",
+      description:
+        "Guiding C-suite executives and senior leaders through AI strategy implementation and personal transformation.",
+      client: "Fortune 500 & Startup Leaders",
+    },
+    cta: {
+      headline: "Let's Talk",
+      subtext:
+        "Let's have a conversation about whether this is right for what you're navigating.",
+      buttonText: "Schedule a Conversation",
     },
   },
 };

@@ -104,42 +104,6 @@ export default function NewsletterPage() {
             </form>
           </motion.div>
 
-          {/* Themes Section */}
-            {/*
-          <motion.div variants={fadeInUp} className="mt-12">
-            <h3 className="text-center font-heading text-[length:var(--text-h3)] font-semibold text-text-primary">
-              What to Expect
-            </h3>
-            <div className="mt-8 grid gap-6 sm:grid-cols-2">
-              <div className="rounded-lg border border-border p-6">
-                <h4 className="font-semibold text-text-primary">Policy Analysis</h4>
-                <p className="mt-2 text-sm text-text-secondary">
-                  Breaking down complex AI regulations and what they mean for
-                  everyday life.
-                </p>
-              </div>
-              <div className="rounded-lg border border-border p-6">
-                <h4 className="font-semibold text-text-primary">Personal Essays</h4>
-                <p className="mt-2 text-sm text-text-secondary">
-                  Reflections on technology&apos;s impact on human connection and agency.
-                </p>
-              </div>
-              <div className="rounded-lg border border-border p-6">
-                <h4 className="font-semibold text-text-primary">Critical Questions</h4>
-                <p className="mt-2 text-sm text-text-secondary">
-                  Challenging assumptions about progress and the cost of convenience.
-                </p>
-              </div>
-              <div className="rounded-lg border border-border p-6">
-                <h4 className="font-semibold text-text-primary">Practical Insights</h4>
-                <p className="mt-2 text-sm text-text-secondary">
-                  Frameworks for navigating an increasingly algorithmic world.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-              */}
-
           {/* About Sean link */}
           <motion.div variants={fadeInUp} className="mt-12 text-center">
             <p className="text-[length:var(--text-body)] text-text-secondary">

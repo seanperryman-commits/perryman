@@ -12,37 +12,18 @@ import {
 } from "@/styles/animations";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
-import { mockupData } from "@/app/mockups/_components/mockupData";
+import { ABOUT_CONTENT, HERO_CONTENT, CAREER_HIGHLIGHTS } from "@/lib/content";
 
-const careerHighlights = [
-  {
-    icon: Briefcase,
-    title: "Global Head of AI Policy at Uber",
-    description:
-      "Created Uber's first EU Algorithmic Transparency Report and served as core team member on Uber's first Civil Rights Assessment.",
-  },
-  {
-    icon: Users,
-    title: "Congressional Counsel",
-    description:
-      "Advised the late Congressman Elijah Cummings on the House Oversight Committee on facial recognition, algorithmic accountability, and technology governance.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Academic Leadership",
-    description:
-      "Designed Vanderbilt Law School's first AI ethics course. Currently teaches law and policy at Vanderbilt and Marymount University.",
-  },
-  {
-    icon: Award,
-    title: "Board & Advisory Roles",
-    description:
-      "Center for Democracy & Technology Advisory Board member. Former FCC Advisory Committee on Diversity and Digital Empowerment appointee.",
-  },
-];
+const iconMap = {
+  Briefcase,
+  Users,
+  GraduationCap,
+  Award,
+} as const;
 
 export default function AboutPage() {
-  const { about, hero } = mockupData;
+  const about = ABOUT_CONTENT;
+  const hero = HERO_CONTENT;
 
   return (
     <>
@@ -187,7 +168,9 @@ export default function AboutPage() {
           }}
           className="mt-12 grid gap-6 md:grid-cols-2"
         >
-          {careerHighlights.map((item) => (
+          {CAREER_HIGHLIGHTS.map((item) => {
+            const Icon = iconMap[item.iconName];
+            return (
             <motion.div
               key={item.title}
               variants={fadeInUp}
@@ -195,7 +178,7 @@ export default function AboutPage() {
               className="rounded-xl bg-card p-8 shadow-lg transition-shadow duration-300 hover:shadow-xl"
             >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
-                <item.icon className="h-6 w-6 text-accent" />
+                <Icon className="h-6 w-6 text-accent" />
               </div>
               <h3 className="mb-3 font-heading text-[length:var(--text-h3)] font-semibold text-text-primary">
                 {item.title}
@@ -204,7 +187,8 @@ export default function AboutPage() {
                 {item.description}
               </p>
             </motion.div>
-          ))}
+          );
+          })}
         </motion.div>
       </Section>
 

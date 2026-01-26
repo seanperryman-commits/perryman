@@ -16,6 +16,9 @@ import {
   Brain,
   Clock,
   Award,
+  Mic,
+  Briefcase,
+  UserCheck,
 } from "lucide-react";
 import {
   fadeInUp,
@@ -40,6 +43,9 @@ const iconMap = {
   brain: Brain,
   clock: Clock,
   award: Award,
+  mic: Mic,
+  briefcase: Briefcase,
+  "user-check": UserCheck,
 } as const;
 
 function getIcon(iconName: ServiceFeature["icon"]) {
