@@ -12,8 +12,8 @@ export default function HomePage() {
       <HeroSection />
       <ValueProposition />
       <ImageBreak
-        src="/images/engagements/panel-sxsw.jpeg"
-        alt="Sean Perryman at SXSW AI Standards panel"
+        src="/images/engagements/panel-ai-standards.jpg"
+        alt="Sean Perryman speaking at AI Standards and Evaluations panel"
         objectPosition="center 40%"
       />
       <ServicesSection />

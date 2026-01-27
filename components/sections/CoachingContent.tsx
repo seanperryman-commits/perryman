@@ -66,7 +66,7 @@ function CoachingHero() {
             <div className="relative w-full max-w-[280px] lg:max-w-[320px]">
               <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)]">
                 <Image
-                  src="/images/headshots/sean-formal.jpg"
+                  src="/images/headshots/sean-blazer.jpg"
                   alt="Sean Perryman - Executive Coach"
                   fill
                   className="object-cover"

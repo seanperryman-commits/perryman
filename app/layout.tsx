@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { StructuredData } from "@/components/structured-data";
+import { SITE_CONFIG_SEO } from "@/lib/site-config";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -20,17 +22,59 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG_SEO.url),
   title: {
-    default: "AI Policy & Governance Advisor",
-    template: "%s | AI Policy & Governance Advisor",
+    default: `${SITE_CONFIG_SEO.name} | ${SITE_CONFIG_SEO.title}`,
+    template: `%s | ${SITE_CONFIG_SEO.name}`,
   },
-  description:
-    "Executive advisory practice specializing in AI policy, governance, and technology consulting.",
+  description: SITE_CONFIG_SEO.description,
+  keywords: [...SITE_CONFIG_SEO.keywords],
+  authors: [{ name: SITE_CONFIG_SEO.fullName }],
+  creator: SITE_CONFIG_SEO.fullName,
+  publisher: SITE_CONFIG_SEO.fullName,
+  formatDetection: {
+    email: false,
+    telephone: false,
+    address: false,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "AI Policy & Governance Advisor",
+    url: SITE_CONFIG_SEO.url,
+    siteName: SITE_CONFIG_SEO.name,
+    title: `${SITE_CONFIG_SEO.name} | ${SITE_CONFIG_SEO.title}`,
+    description: SITE_CONFIG_SEO.description,
+    images: [
+      {
+        url: SITE_CONFIG_SEO.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${SITE_CONFIG_SEO.name} — ${SITE_CONFIG_SEO.title}`,
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_CONFIG_SEO.name} | ${SITE_CONFIG_SEO.title}`,
+    description: SITE_CONFIG_SEO.description,
+    images: [SITE_CONFIG_SEO.ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -40,6 +84,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <StructuredData />
+      </head>
       <body
         className={`${lora.variable} ${nunito.variable} antialiased`}
       >

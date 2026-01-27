@@ -47,7 +47,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${meta.title} | ${SITE_CONFIG.name}`,
+    title: meta.title,
     description: meta.description,
   };
 }

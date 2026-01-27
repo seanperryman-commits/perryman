@@ -78,7 +78,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
         "His talks connect technical developments to business strategy, regulatory trends to competitive positioning, and ethical questions to practical decisions.",
         "From keynoting major tech conferences to leading executive workshops, Sean delivers content that audiences describe as \"immediately actionable.\"",
       ],
-      image: "/images/engagements/panel-sxsw.jpeg",
+      image: "/images/engagements/keynote-colombia-wide.jpeg",
     },
     features: [
       {

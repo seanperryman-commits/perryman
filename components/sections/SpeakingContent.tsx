@@ -11,19 +11,19 @@ import { Button } from "@/components/ui/Button";
 // Engagement photos with event context
 const engagements = [
   {
-    src: "/images/engagements/keynote-bogota.jpeg",
-    alt: "Sean Perryman keynote in Bogota, Colombia",
+    src: "/images/engagements/keynote-colombia.jpeg",
+    alt: "Sean Perryman keynote at Colombia AI conference",
     event: "AI Leadership Summit",
     location: "Bogota, Colombia",
     type: "Keynote",
     featured: true,
   },
   {
-    src: "/images/engagements/panel-sxsw.jpeg",
-    alt: "Sean Perryman at SXSW AI Standards panel",
-    event: "SXSW",
-    location: "Austin, TX",
-    type: "Panel",
+    src: "/images/engagements/keynote-colombia-wide.jpeg",
+    alt: "Sean Perryman keynoting at Colombia AI conference",
+    event: "AI Colombia Summit",
+    location: "Bogota, Colombia",
+    type: "Keynote",
   },
   {
     src: "/images/engagements/panel-iapp-privacy.jpeg",
