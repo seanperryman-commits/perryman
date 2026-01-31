@@ -6,6 +6,7 @@ import { fadeInUp, staggerContainer } from "@/styles/animations";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { NEWSLETTER_CTA } from "@/lib/content";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 
 export function NewsletterCTA() {
   return (
@@ -40,7 +41,7 @@ export function NewsletterCTA() {
 
         <motion.div variants={fadeInUp} className="mt-8">
           <a
-            href="https://thehumancostai.substack.com/"
+            href={EXTERNAL_LINKS.newsletter}
             target="_blank"
             rel="noopener noreferrer"
           >

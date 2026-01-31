@@ -101,6 +101,7 @@ export default function RootLayout({
           <select name="subject">
             <option value="consulting">Consulting Inquiry</option>
             <option value="speaking">Speaking Request</option>
+            <option value="coaching">Executive Coaching</option>
             <option value="other">Other</option>
           </select>
           <textarea name="message" />

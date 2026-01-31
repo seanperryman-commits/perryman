@@ -7,6 +7,7 @@ import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { CONTACT_PAGE, CONTACT_FAQ } from "@/lib/content";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 
 export default function ContactPage() {
   return (
@@ -70,7 +71,7 @@ export default function ContactPage() {
               {CONTACT_PAGE.calendly.text}
             </p>
             <a
-              href="https://calendly.com/sean-perrymanconsulting/30min"
+              href={EXTERNAL_LINKS.calendly}
               target="_blank"
               rel="noopener noreferrer"
             >

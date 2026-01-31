@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
+import { CONTACT_FORM } from "@/lib/content";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -36,9 +37,11 @@ export function ContactForm() {
   if (formState === "success") {
     return (
       <div className="rounded-lg border border-accent/20 bg-accent/5 p-8 text-center">
-        <h3 className="font-heading text-[length:var(--text-h3)] text-text-primary">Thank you!</h3>
+        <h3 className="font-heading text-[length:var(--text-h3)] text-text-primary">
+          {CONTACT_FORM.messages.success.title}
+        </h3>
         <p className="mt-2 text-text-primary/70">
-          Your message has been sent. I&apos;ll get back to you soon.
+          {CONTACT_FORM.messages.success.body}
         </p>
       </div>
     );
@@ -62,7 +65,7 @@ export function ContactForm() {
 
       {formState === "error" && (
         <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-red-700">
-          Something went wrong. Please try again.
+          {CONTACT_FORM.messages.error}
         </div>
       )}
 
@@ -71,7 +74,7 @@ export function ContactForm() {
           htmlFor="name"
           className="block text-sm font-medium text-text-primary"
         >
-          Name
+          {CONTACT_FORM.fields.name.label}
         </label>
         <input
           type="text"
@@ -79,7 +82,7 @@ export function ContactForm() {
           name="name"
           required
           className="mt-1 block w-full rounded-lg border border-border bg-white px-4 py-3 text-text-primary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
-          placeholder="Your name"
+          placeholder={CONTACT_FORM.fields.name.placeholder}
         />
       </div>
 
@@ -88,7 +91,7 @@ export function ContactForm() {
           htmlFor="email"
           className="block text-sm font-medium text-text-primary"
         >
-          Email
+          {CONTACT_FORM.fields.email.label}
         </label>
         <input
           type="email"
@@ -96,7 +99,7 @@ export function ContactForm() {
           name="email"
           required
           className="mt-1 block w-full rounded-lg border border-border bg-white px-4 py-3 text-text-primary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
-          placeholder="your@email.com"
+          placeholder={CONTACT_FORM.fields.email.placeholder}
         />
       </div>
 
@@ -105,7 +108,7 @@ export function ContactForm() {
           htmlFor="subject"
           className="block text-sm font-medium text-text-primary"
         >
-          Subject
+          {CONTACT_FORM.fields.subject.label}
         </label>
         <select
           id="subject"
@@ -113,11 +116,12 @@ export function ContactForm() {
           required
           className="mt-1 block w-full rounded-lg border border-border bg-white px-4 py-3 text-text-primary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
         >
-          <option value="">Select a topic</option>
-          <option value="consulting">Consulting Inquiry</option>
-          <option value="speaking">Speaking Request</option>
-          <option value="coaching">Executive Coaching</option>
-          <option value="other">Other</option>
+          <option value="">{CONTACT_FORM.fields.subject.placeholder}</option>
+          {CONTACT_FORM.subjects.map((subject) => (
+            <option key={subject.value} value={subject.value}>
+              {subject.label}
+            </option>
+          ))}
         </select>
       </div>
 
@@ -126,7 +130,7 @@ export function ContactForm() {
           htmlFor="message"
           className="block text-sm font-medium text-text-primary"
         >
-          Message
+          {CONTACT_FORM.fields.message.label}
         </label>
         <textarea
           id="message"
@@ -134,7 +138,7 @@ export function ContactForm() {
           rows={5}
           required
           className="mt-1 block w-full rounded-lg border border-border bg-white px-4 py-3 text-text-primary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
-          placeholder="Tell me about your project..."
+          placeholder={CONTACT_FORM.fields.message.placeholder}
         />
       </div>
 
@@ -143,7 +147,7 @@ export function ContactForm() {
         className="w-full"
         disabled={formState === "submitting"}
       >
-        {formState === "submitting" ? "Sending..." : "Send Message"}
+        {formState === "submitting" ? CONTACT_FORM.messages.submitting : CONTACT_FORM.messages.submit}
       </Button>
     </form>
   );

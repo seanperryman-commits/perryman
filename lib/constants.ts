@@ -33,6 +33,11 @@ export const SOCIAL_LINKS = [
   { label: "X", href: "https://x.com/SeanPerrymanVA", icon: "x" },
 ] as const;
 
+export const EXTERNAL_LINKS = {
+  calendly: "https://calendly.com/sean-perrymanconsulting/30min",
+  newsletter: "https://thehumancostai.substack.com/",
+} as const;
+
 export const SITE_CONFIG = {
   name: "Sean Perryman",
   title: "Speaker. Consultant. Strategist. Coach.",

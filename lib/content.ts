@@ -129,6 +129,46 @@ export const CONTACT_FAQ = [
 ] as const;
 
 // =============================================================================
+// CONTACT FORM
+// =============================================================================
+
+export const CONTACT_FORM = {
+  subjects: [
+    { value: "consulting", label: "Consulting Inquiry" },
+    { value: "speaking", label: "Speaking Request" },
+    { value: "coaching", label: "Executive Coaching" },
+    { value: "other", label: "Other" },
+  ],
+  fields: {
+    name: {
+      label: "Name",
+      placeholder: "Your name",
+    },
+    email: {
+      label: "Email",
+      placeholder: "your@email.com",
+    },
+    subject: {
+      label: "Subject",
+      placeholder: "Select a topic",
+    },
+    message: {
+      label: "Message",
+      placeholder: "Tell me about your project...",
+    },
+  },
+  messages: {
+    success: {
+      title: "Thank you!",
+      body: "Your message has been sent. I'll get back to you soon.",
+    },
+    error: "Something went wrong. Please try again.",
+    submitting: "Sending...",
+    submit: "Send Message",
+  },
+} as const;
+
+// =============================================================================
 // CTA CONTENT
 // =============================================================================
 

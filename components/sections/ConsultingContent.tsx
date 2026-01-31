@@ -361,6 +361,22 @@ export function ConsultingContent() {
       <ConsultingHero />
       <ProcessSection />
       <OfferingsSection />
+      {/*
+        CASE STUDY SECTION (currently hidden)
+        =====================================
+        This section showcases real work (Uber AI Transparency Report) and is ready to use.
+        The content is already defined in lib/content.ts under CONSULTING_SECTIONS.caseStudy.
+
+        To re-enable:
+        1. Uncomment the line below: <CaseStudySection />
+        2. That's it! The content and styling are already complete.
+
+        The section displays:
+        - Featured work label
+        - Uber AI Transparency Report case study
+        - Key outcomes list
+        - Attribution
+      */}
       {/* <CaseStudySection /> */}
       <ConsultingCTA />
     </>
