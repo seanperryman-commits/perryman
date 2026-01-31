@@ -1,0 +1,52 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Domain redirects for service-specific domains
+# These redirect service domains to the appropriate service pages on the main site.
+# All domains must be added to Netlify as domain aliases in the dashboard.
+
+[[redirects]]
+  from = "https://perrymanconsulting.com/*"
+  to = "https://seanaperryman.com/services/consulting"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.perrymanconsulting.com/*"
+  to = "https://seanaperryman.com/services/consulting"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://perrymancoaching.com/*"
+  to = "https://seanaperryman.com/services/coaching"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.perrymancoaching.com/*"
+  to = "https://seanaperryman.com/services/coaching"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://perrymanspeaking.com/*"
+  to = "https://seanaperryman.com/services/public-speaking"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.perrymanspeaking.com/*"
+  to = "https://seanaperryman.com/services/public-speaking"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
