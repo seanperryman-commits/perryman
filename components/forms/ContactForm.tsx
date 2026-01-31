@@ -116,6 +116,7 @@ export function ContactForm() {
           <option value="">Select a topic</option>
           <option value="consulting">Consulting Inquiry</option>
           <option value="speaking">Speaking Request</option>
+          <option value="coaching">Executive Coaching</option>
           <option value="other">Other</option>
         </select>
       </div>

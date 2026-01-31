@@ -40,7 +40,7 @@ export function NewsletterCTA() {
 
         <motion.div variants={fadeInUp} className="mt-8">
           <a
-            href="http://thehumancostai.substack.com/"
+            href="https://thehumancostai.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -237,9 +237,9 @@ function OfferingsSection() {
           return (
             <motion.div
               variants={scaleUp}
-              className="mt-6 rounded-xl bg-white p-6 shadow-sm md:flex md:items-center md:gap-6"
+              className="group mt-6 rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md md:flex md:items-center md:gap-6"
             >
-              <div className="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent md:mb-0">
+              <div className="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white md:mb-0">
                 <SeventhIcon className="h-6 w-6" />
               </div>
               <div>

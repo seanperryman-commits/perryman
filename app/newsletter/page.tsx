@@ -84,7 +84,7 @@ export default function NewsletterPage() {
               {NEWSLETTER_PAGE.subscribe.subtitle}
             </p>
             <a
-              href="http://thehumancostai.substack.com/"
+              href="https://thehumancostai.substack.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-block"

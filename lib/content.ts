@@ -477,7 +477,7 @@ export const COACHING_PROCESS = {
   paragraphs: [
     "1:1 coaching engagements typically run 3-6 months with biweekly sessions. Between sessions, you\u2019re implementing\u2014I\u2019m available for real-time challenges as they emerge.",
     "Group Coaching for groups of executives adopting, implementing with AI or managing teams through technological change.",
-    "As a certified executive coach with practitioner experience designing AI governance for global operations, advising Congress on algorithmic accountability, and teaching AI ethics at Vanderbilt Law, I bring both coaching methodology and hard-won expertise to leadership challenges that are fundamentally unprecedented. Also, as a leader and executive that has navigated personal and professional transitions, I work with you to acheive success in the face of challenging changes.",
+    "As a certified executive coach with practitioner experience designing AI governance for global operations, advising Congress on algorithmic accountability, and teaching AI ethics at Vanderbilt Law, I bring both coaching methodology and hard-won expertise to leadership challenges that are fundamentally unprecedented. Also, as a leader and executive that has navigated personal and professional transitions, I work with you to achieve success in the face of challenging changes.",
   ],
 } as const;
 

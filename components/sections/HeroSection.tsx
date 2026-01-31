@@ -15,7 +15,7 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-br from-background-dark via-background-dark-end to-background-dark text-white">
       {/* Subtle radial glow behind image area */}
-      <div className="pointer-events-none absolute right-0 top-1/2 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/4 rounded-full bg-accent/5 blur-3xl" />
+      <div className="pointer-events-none absolute right-0 top-1/2 h-[300px] w-[300px] md:h-[600px] md:w-[600px] -translate-y-1/2 translate-x-1/4 rounded-full bg-accent/5 blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-6 md:px-8">
         <div className="flex min-h-[90vh] flex-col items-center gap-8 py-24 sm:gap-10 lg:flex-row lg:items-center lg:gap-12 lg:py-0">
           {/* Text Content - Left Side */}

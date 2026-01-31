@@ -70,11 +70,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-  manifest: "/site.webmanifest",
+  // Icons are auto-generated from app/icon.tsx and app/apple-icon.tsx
+  // Manifest is auto-generated from app/manifest.ts
 };
 
 export default function RootLayout({
