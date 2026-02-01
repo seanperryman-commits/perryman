@@ -45,6 +45,27 @@
   status = 301
   force = true
 
+  # Redirect Netlify subdomain to primary domain
+[[redirects]]
+  from = "https://seanperryman.netlify.app/*"
+  to = "https://seanaperryman.com/:splat"
+  status = 301
+  force = true
+
+  # Redirect www to apex for primary domain
+[[redirects]]
+  from = "https://www.seanaperryman.com/*"
+  to = "https://seanaperryman.com/:splat"
+  status = 301
+  force = true
+```
+
+**Verification After Deploy:**
+
+Check your deploy log for something like:
+```
+8 redirect rules processed
+
 [[headers]]
   for = "/*"
   [headers.values]

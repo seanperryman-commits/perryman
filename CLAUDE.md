@@ -1,10 +1,7 @@
 # Sean Perryman Advisory Site
 
-> **WIP MODE ACTIVE**: `middleware.ts` blocks all routes except `/mockups/*`. Delete `middleware.ts` and update `public/robots.txt` when ready to launch.
+Personal brand site for AI policy/governance consulting. Virtual business card for warm leads—not SEO bait. Priority: **fast, polished, professional**.
 
-Personal brand site for AI policy/governance consulting. Virtual business card for warm leads—not SEO bait. Priority: **fast, polished, professional**. Sloppy or slow = failure.
-
-**IMPORTANT:** only work on the actual site, the mockups do not need to be edited and should not need to be read for context unless explicitly specified
 ---
 
 ## Commands
@@ -13,83 +10,73 @@ Personal brand site for AI policy/governance consulting. Virtual business card f
 npm run dev          # Local dev (Turbopack)
 npm run build        # Prod build - RUN BEFORE EVERY DEPLOY
 npm run lint         # ESLint
-npx tsc --noEmit     # Type check (no pre-commit hook, do manually)
+npx tsc --noEmit     # Type check
 ```
 
-Deploy: Push to main → Netlify auto-deploys. No staging environment.
+Deploy: Push to main → Netlify auto-deploys.
 
 ---
 
-## Design Direction
+## Routes & Service Slugs
 
-**Chosen direction**: Hybrid — Mockup 2's dark hero + Mockup 3's warm typography + bookended dark sections
+| Route | Page |
+|-------|------|
+| `/` | Home |
+| `/about` | About |
+| `/services` | Services overview |
+| `/services/public-speaking` | Speaking detail |
+| `/services/consulting` | Consulting detail |
+| `/services/coaching` | Coaching detail |
+| `/contact` | Contact form |
+| `/newsletter` | Newsletter signup |
 
-**Brand feel**: Credible, authoritative, in-demand
-
-### Color Palette
-
-| Role | Hex | Tailwind Class |
-|------|-----|----------------|
-| Primary Background | `#FAFAF8` | `bg-background` |
-| Secondary (dark) | `#0F172A` | `bg-background-dark` |
-| Accent | `#0EA5E9` | `bg-accent`, `text-accent` |
-| Text (light bg) | `#1A1A1A` | `text-text-primary` |
-| Text (dark bg) | `#FFFFFF` | `text-on-dark` |
-
-### Typography
-
-- **Headings**: Lora (serif) — warm, authoritative
-- **Body**: Nunito (sans-serif) — clean, approachable
-
-### Layout Pattern
-
-```
-[Header - sticky]
-[Hero - dark navy, full-width, photo right]
-[Services - 1×3 cards on off-white]
-[About - two column, photo left]
-[Testimonial - dark box on light bg]
-[CTA - dark navy, bookends with hero]
-[Footer - light]
-```
-
-### Key Decisions
-- **Hero**: Big, viewport-filling, dark blue background, portrait photo RIGHT, text LEFT
-- **Bookending**: Dark navy hero + dark navy CTA section frame the light content
-- **Buttons**: Subtle rounding (6px), filled primary, outlined secondary
-- **Cards**: White with shadow, lift on hover
-- **Services order**: Public Speaking, Business Consulting, Executive Coaching
-- **Nav structure**: Home, About, Services (links) + Contact (emphasized CTA button)
-- **Service slugs**: `/services/public-speaking`, `/services/business-consulting`, `/services/executive-coaching`
-
-See `/docs/design-spec.md` for full technical implementation details.
-See `/docs/design-brief.md` for client-facing branding summary.
+**Domain redirects** (configured in `netlify.toml`):
+- `perrymanconsulting.com` → `/services/consulting`
+- `perrymancoaching.com` → `/services/coaching`
+- `perrymanspeaking.com` → `/services/public-speaking`
 
 ---
 
-## Architecture Decisions
+## File Structure
 
-### No State Management
-Simple brochure site. React state is enough. Don't add zustand/context unless something changes drastically.
+```
+app/
+  page.tsx                    # Home
+  about/page.tsx
+  services/page.tsx
+  services/[slug]/page.tsx    # Dynamic service detail pages
+  contact/page.tsx
+  newsletter/page.tsx
+components/
+  ui/                         # Button, Card, Container, Section, OptimizedImage
+  layout/                     # Header, Footer, Navigation
+  sections/                   # HeroSection, ServicesSection, AboutPreview, etc.
+  forms/                      # ContactForm
+styles/
+  animations.ts               # Framer Motion variants
+lib/
+  utils.ts                    # cn() helper
+  constants.ts                # NAV_ITEMS, SERVICES, SITE_CONFIG, SERVICE_DETAILS
+docs/                         # Design specs, copy docs (reference only)
+```
 
-### Client vs Server Components
-- **Default to Server Components** for everything static
-- **Use 'use client'** only for: animated sections (Framer Motion), mobile menu toggle, contact form
-- The mockups are all client components—that's fine for prototyping but production pages should split animated pieces into client islands
+---
 
-### Forms: Netlify Forms
-Contact form uses Netlify's built-in form handling. Requirements:
-1. Add `data-netlify="true"` to form element
-2. Add hidden input: `<input type="hidden" name="form-name" value="contact" />`
-3. Match `name="contact"` to form name attribute
+## Design Tokens
 
-No Formspree, no Resend, no custom API route needed.
+Tailwind v4 config lives in `app/globals.css` via `@theme {}`.
+
+**Colors**: `bg-background`, `bg-background-dark`, `text-accent`, `text-on-dark`
+
+**Fonts**: `font-heading` (Lora), `font-body` (Nunito)
+
+**Typography scale**: `text-hero`, `text-h1`, `text-h2`, `text-h3`, `text-body`, `text-small`
 
 ---
 
 ## Animation Pattern
 
-Use `styles/animations.ts` variants. Don't redefine in components.
+Use variants from `styles/animations.ts`. Don't redefine.
 
 ```tsx
 import { fadeInUp, staggerContainer } from "@/styles/animations";
@@ -97,114 +84,59 @@ import { fadeInUp, staggerContainer } from "@/styles/animations";
 <motion.div
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: true }}  // ALWAYS include once:true
+  viewport={{ once: true }}  // ALWAYS include
   variants={staggerContainer}
 >
   <motion.p variants={fadeInUp}>Content</motion.p>
 </motion.div>
 ```
 
-**Why `once: true`**: Without it, elements re-animate on scroll up. Looks janky.
-
-Available variants: `fadeIn`, `fadeInUp`, `staggerContainer`, `scaleUp`, `slideInLeft`, `slideInRight`
-
-Timing: 0.5-0.6s duration. Easing: `[0.4, 0, 0.2, 1]` (standard ease-out). Don't make animations slower—site should feel snappy.
+Available: `fadeIn`, `fadeInUp`, `staggerContainer`, `scaleUp`, `slideInLeft`, `slideInRight`
 
 ---
 
-## Tailwind v4 Gotchas
+## Forms
 
-Config lives in `app/globals.css` via `@theme {}`, not a config file.
-
-```css
-/* globals.css */
-@theme {
-  --color-background: #FAFAF8;
-  --color-background-dark: #0F172A;
-  --color-accent: #0EA5E9;
-  /* see docs/design-spec.md for full list */
-}
-```
-
-Use like: `bg-background`, `bg-background-dark`, `text-accent`, `text-on-dark`
-
-**Custom font variables**:
-- `font-heading` = Lora (serif headlines)
-- `font-body` = Nunito (body text)
-
-**Typography scale** (fluid, don't override):
-- `text-hero` = biggest (hero headlines)
-- `text-h1`, `text-h2`, `text-h3` = section headers
-- `text-body` = paragraphs
-- `text-small` = captions/fine print
+Contact form uses Netlify Forms:
+1. `data-netlify="true"` on form element
+2. Hidden input: `<input type="hidden" name="form-name" value="contact" />`
 
 ---
 
-## File Structure That Matters
+## Key Constants
 
-```
-app/
-  mockups/           # Design prototypes for client review
-    _components/     # Mockup components + shared mockupData.ts
-  (pages)/           # Production routes live here after design lock
-components/
-  ui/                # Button, Card, Container, Section (built)
-  layout/            # Header, Footer, Navigation (built)
-styles/
-  animations.ts      # Framer Motion variants (use these!)
-lib/
-  utils.ts           # cn() helper
-  constants.ts       # NAV_ITEMS, SITE_CONFIG
-```
-
----
-
-## Content Placeholders
-
-**Client name**: Sean Perryman
-**Working title**: AI Policy & Governance Advisor
-
-Waiting on client:
-- [ ] Professional headshot
-- [ ] Bio copy
-- [ ] Client logos / testimonials
-- [ ] Calendly URL
-
-Use placeholder images from Unsplash for now (see mockupData.ts for examples). Replace with real assets before launch.
+All in `lib/constants.ts`:
+- `NAV_ITEMS` / `NAV_CTA` — navigation links
+- `SERVICES` — service slugs and labels
+- `SERVICE_DETAILS` — full content for service detail pages
+- `SOCIAL_LINKS` — LinkedIn, X
+- `EXTERNAL_LINKS.calendly` — booking link
 
 ---
 
 ## Common Gotchas
 
-1. **Next.js 16 image domains**: If adding external images, update `next.config.ts` with domains/remotePatterns
-
-2. **Framer Motion + Server Components**: Don't try to animate server components. Wrap animated sections in a client component.
-
-3. **Netlify Forms not working**: Usually missing the hidden form-name input or the `data-netlify` attribute.
-
-4. **Tailwind classes not applying**: Probably a typo in the custom color name. Check `@theme {}` in globals.css.
-
-5. **Fonts not loading**: Check `app/layout.tsx`—fonts come from next/font/google and get applied via CSS variables.
+1. **Framer Motion + Server Components**: Wrap animated sections in a client component
+2. **Netlify Forms not working**: Check hidden `form-name` input exists
+3. **Tailwind classes not applying**: Check spelling against `@theme {}` in globals.css
+4. **External images**: Add domains to `next.config.ts` remotePatterns
 
 ---
 
 ## Quality Bar
 
 Before shipping:
+- [ ] `npm run build` passes
 - [ ] Lighthouse performance > 90
-- [ ] No layout shift (CLS < 0.1)
-- [ ] All images use next/image with proper sizing
 - [ ] Mobile nav works
 - [ ] Contact form submits to Netlify
 - [ ] No console errors
-- [ ] Runs `npm run build` without errors
 
 ---
 
 ## What NOT to Do
 
-- Don't add a CMS—client will rarely update this
-- Don't over-engineer the contact form—Netlify handles it
-- Don't add page transitions—scroll animations are enough
-- Don't use Calendly embed if it bloats the page—link out instead
-- Don't create new animation variants—use the ones in styles/animations.ts
+- Don't add a CMS
+- Don't over-engineer the contact form
+- Don't add page transitions
+- Don't create new animation variants
