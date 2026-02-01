@@ -41,7 +41,7 @@ export const EXTERNAL_LINKS = {
 export const SITE_CONFIG = {
   name: "Sean Perryman",
   title: "Speaker. Consultant. Strategist. Coach.",
-  email: "hello@seanperryman.com",
+  email: "sean@perrymanconsulting.com",
 } as const;
 
 // Service Detail Page Content

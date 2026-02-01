@@ -1,12 +1,7 @@
 /**
  * Centralized content for the site
- * This file consolidates content from mockupData and inline definitions.
- *
- * Key items requiring confirmation with client before launch:
- * - TESTIMONIAL: Entire content is placeholder (J. Smith, Technology Executive)
- * - SOCIAL_LINKS in constants.ts: Need full profile URLs
- * - SITE_CONFIG.email in constants.ts: Verify correct email
- */
+ * This file consolidates content from inline definitions.
+  */
 
 // =============================================================================
 // HERO SECTION
@@ -18,7 +13,7 @@ export const HERO_CONTENT = {
   tagline: "AI Strategy, Policy, and Ethics",
   primaryCTA: "Schedule a Consultation",
   secondaryCTA: "Learn More",
-  image: "/images/headshots/sean-blazer.jpg",
+  image: "/images/headshots/sean-hero.jpg",
 } as const;
 
 // =============================================================================
