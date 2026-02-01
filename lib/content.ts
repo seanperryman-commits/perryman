@@ -18,7 +18,7 @@ export const HERO_CONTENT = {
   tagline: "AI Strategy, Policy, and Ethics",
   primaryCTA: "Schedule a Consultation",
   secondaryCTA: "Learn More",
-  image: "/images/headshots/sean-hero.jpg",
+  image: "/images/headshots/sean-blazer.jpg",
 } as const;
 
 // =============================================================================
@@ -194,37 +194,6 @@ export const TESTIMONIAL = {
   role: "Technology Executive", // PLACEHOLDER
   company: "Enterprise Client", // PLACEHOLDER
 } as const;
-
-// =============================================================================
-// FOCUS AREAS (for potential future use)
-// =============================================================================
-
-export const FOCUS_AREAS = [
-  {
-    title: "AI Strategy & Implementation",
-    description:
-      "Develop comprehensive AI roadmaps aligned with business objectives and ethical principles.",
-    icon: "strategy",
-  },
-  {
-    title: "Governance Framework Design",
-    description:
-      "Build robust governance structures that ensure responsible AI deployment at scale.",
-    icon: "governance",
-  },
-  {
-    title: "Policy Advisory & Compliance",
-    description:
-      "Navigate evolving regulations and establish proactive compliance frameworks.",
-    icon: "policy",
-  },
-  {
-    title: "Executive Education & Speaking",
-    description:
-      "Keynotes and workshops that prepare leadership teams for the AI-driven future.",
-    icon: "speaking",
-  },
-] as const;
 
 // =============================================================================
 // VALUE PROPOSITION SECTION (homepage)

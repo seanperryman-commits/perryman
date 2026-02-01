@@ -5,8 +5,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/styles/animations";
 import { Button } from "@/components/ui/Button";
-// CredentialChip import commented out - chips are disabled in hero
-// import { CredentialChip } from "@/components/ui/CredentialChip";
 import { HERO_CONTENT } from "@/lib/content";
 
 export function HeroSection() {
@@ -69,16 +67,6 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
           >
             <div className="relative w-full max-w-md lg:max-w-lg">
-              {/* Floating credential chips */}
-              {/*
-              <div className="absolute -left-8 top-12 z-10 hidden lg:block">
-                <CredentialChip>First Global Head of AI Policy at Uber</CredentialChip>
-              </div>
-              <div className="absolute -right-8 bottom-32 z-10 hidden lg:block">
-                <CredentialChip>Oversight Committee Former Counsel</CredentialChip>
-              </div>
-              */}
-
               {/* Photo with soft shadow */}
               <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)]">
                 <Image
