@@ -70,7 +70,7 @@ export const SERVICE_DESCRIPTIONS = {
   "public-speaking":
     "Cutting through AI hype to deliver strategic insight—from keynotes at major conferences to executive briefings that audiences describe as immediately actionable.",
   consulting:
-    "Translating complex AI policy into business strategy. Governance frameworks, risk assessment, regulatory intelligence, and ethics that scale.",
+    "Translating AI policy into business strategy. Governance frameworks, risk assessment, regulatory intelligence, and ethics that scale.",
   coaching:
     "One-on-one executive coaching for leaders navigating AI strategy, governance decisions, and organizational transformation.",
 } as const;
