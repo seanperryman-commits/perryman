@@ -58,13 +58,6 @@
   to = "https://seanaperryman.com/:splat"
   status = 301
   force = true
-```
-
-**Verification After Deploy:**
-
-Check your deploy log for something like:
-```
-8 redirect rules processed
 
 [[headers]]
   for = "/*"
