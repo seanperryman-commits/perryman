@@ -45,9 +45,15 @@
   status = 301
   force = true
 
-  # Redirect Netlify subdomain to primary domain
+  # Redirect Netlify subdomains to primary domain
 [[redirects]]
   from = "https://seanperryman.netlify.app/*"
+  to = "https://seanaperryman.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://seanaperryman.netlify.app/*"
   to = "https://seanaperryman.com/:splat"
   status = 301
   force = true
