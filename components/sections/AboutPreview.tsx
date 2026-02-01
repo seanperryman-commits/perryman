@@ -13,22 +13,25 @@ export function AboutPreview() {
 
   return (
     <Section background="light" padding="lg">
-      <div className="grid items-center gap-12 lg:grid-cols-2">
+      <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
         {/* Photo - Left Side */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={slideInLeft}
+          className="order-2 lg:order-1"
         >
-          <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-xl">
-            <Image
-              src={'/images/headshots/sean-formal.jpg'}
-              alt={`${hero.name} portrait`}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+          <div className="mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-xl">
+              <Image
+                src={'/images/headshots/sean-formal.jpg'}
+                alt={`${hero.name} portrait`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 320px, (max-width: 1024px) 384px, 50vw"
+              />
+            </div>
           </div>
         </motion.div>
 
@@ -38,7 +41,7 @@ export function AboutPreview() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="lg:py-4"
+          className="order-1 lg:order-2 lg:py-4"
         >
           <motion.p
             variants={fadeInUp}

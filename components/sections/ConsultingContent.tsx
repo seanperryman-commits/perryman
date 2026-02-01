@@ -90,7 +90,7 @@ function ConsultingHero() {
                     <span className="font-heading font-semibold text-white">
                       {client.type}
                     </span>
-                    <p className="mt-1 text-xs text-text-on-dark-muted">
+                    <p className="mt-1 text-sm text-text-on-dark-muted">
                       {client.description}
                     </p>
                   </div>
@@ -100,13 +100,13 @@ function ConsultingHero() {
           </motion.div>
 
           <motion.div
-            className="relative flex flex-1 items-center justify-center lg:justify-end"
+            className="relative flex w-full flex-1 items-center justify-center lg:justify-end"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
           >
-            <div className="relative w-full max-w-lg">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
+            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-lg">
+              <div className="relative aspect-[3/4] sm:aspect-[4/3] overflow-hidden rounded-lg shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
                 <Image
                   src="/images/engagements/panel-trustworthy-ai.jpeg"
                   alt="Sean Perryman at AI Action Summit, Paris"
@@ -166,20 +166,22 @@ function ProcessSection() {
             </div>
           </motion.div>
 
-          <motion.div variants={slideInRight} className="flex items-center">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg shadow-xl">
-              <Image
-                src="/images/engagements/panel-georgetown-ai.jpeg"
-                alt="Sean Perryman at Georgetown AI Policy Forum"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="font-heading text-sm font-semibold text-white">
-                  Georgetown Law AI Policy Forum
-                </p>
+          <motion.div variants={slideInRight} className="flex items-center justify-center">
+            <div className="mx-auto w-full max-w-[280px] md:max-w-sm lg:max-w-none">
+              <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden rounded-lg shadow-xl">
+                <Image
+                  src="/images/engagements/panel-georgetown-ai.jpeg"
+                  alt="Sean Perryman at Georgetown AI Policy Forum"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 280px, (max-width: 1024px) 384px, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="font-heading text-sm font-semibold text-white">
+                    Georgetown Law AI Policy Forum
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

@@ -45,7 +45,7 @@ export function ServicesSection() {
               <motion.div key={service.slug} variants={fadeInUp} className="h-full">
                 <Link href={`/services/${service.slug}`} className="group block h-full">
                   <article
-                    className="flex h-full flex-col overflow-hidden rounded-lg bg-accent p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8"
+                    className="flex h-full flex-col overflow-hidden rounded-lg bg-accent p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:scale-[0.98] focus-within:ring-2 focus-within:ring-white/50 sm:p-8"
                   >
                     <div className="mb-6 flex items-center justify-between">
                       <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/20 text-white shadow-md">

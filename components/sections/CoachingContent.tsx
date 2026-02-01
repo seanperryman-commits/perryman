@@ -64,13 +64,13 @@ function CoachingHero() {
           </motion.div>
 
           <motion.div
-            className="relative flex items-center justify-center lg:flex-1 lg:justify-end"
+            className="relative flex w-full items-center justify-center lg:flex-1 lg:justify-end"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
           >
-            <div className="relative w-full max-w-[280px] lg:max-w-[320px]">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)]">
+            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-[360px]">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)]">
                 <Image
                   src="/images/headshots/sean-blazer.jpg"
                   alt="Sean Perryman - Executive Coach"
@@ -112,16 +112,18 @@ function ProcessSection() {
             ))}
           </motion.div>
 
-          <motion.div variants={slideInRight} className="flex items-center">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg shadow-xl">
-              <Image
-                src="/images/headshots/sean-about.jpg"
-                alt="Sean Perryman - Executive Coaching"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+          <motion.div variants={slideInRight} className="flex items-center justify-center">
+            <div className="mx-auto w-full max-w-[280px] md:max-w-sm lg:max-w-none">
+              <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden rounded-lg shadow-xl">
+                <Image
+                  src="/images/headshots/sean-about.jpg"
+                  alt="Sean Perryman - Executive Coaching"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 280px, (max-width: 1024px) 384px, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              </div>
             </div>
           </motion.div>
         </div>

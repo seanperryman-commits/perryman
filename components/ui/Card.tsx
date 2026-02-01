@@ -12,7 +12,7 @@ function Card({ className, hover = true, children, ...props }: CardProps) {
       className={cn(
         "rounded-lg bg-white p-6 md:p-8",
         hover &&
-          "transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg",
+          "transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2",
         className
       )}
       {...props}

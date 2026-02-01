@@ -81,6 +81,8 @@ export function ContactForm() {
           id="name"
           name="name"
           required
+          inputMode="text"
+          autoComplete="name"
           className="mt-1 block w-full rounded-lg border border-border bg-white px-4 py-3 text-text-primary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
           placeholder={CONTACT_FORM.fields.name.placeholder}
         />
@@ -98,6 +100,8 @@ export function ContactForm() {
           id="email"
           name="email"
           required
+          inputMode="email"
+          autoComplete="email"
           className="mt-1 block w-full rounded-lg border border-border bg-white px-4 py-3 text-text-primary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
           placeholder={CONTACT_FORM.fields.email.placeholder}
         />
@@ -135,9 +139,10 @@ export function ContactForm() {
         <textarea
           id="message"
           name="message"
-          rows={5}
+          rows={3}
           required
-          className="mt-1 block w-full rounded-lg border border-border bg-white px-4 py-3 text-text-primary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+          autoComplete="off"
+          className="mt-1 block min-h-[100px] w-full rounded-lg border border-border bg-white px-4 py-3 text-text-primary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 md:min-h-[140px]"
           placeholder={CONTACT_FORM.fields.message.placeholder}
         />
       </div>

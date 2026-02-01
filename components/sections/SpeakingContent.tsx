@@ -68,14 +68,14 @@ export function SpeakingHero() {
 
           {/* Featured Image - Right Side */}
           <motion.div
-            className="relative flex flex-1 items-center justify-center lg:justify-end"
+            className="relative flex w-full flex-1 items-center justify-center lg:justify-end"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
           >
-            <div className="relative w-full max-w-lg">
+            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-lg">
               {/* Main keynote image */}
-              <div className="relative aspect-square overflow-hidden rounded-lg shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
+              <div className="relative aspect-[3/4] sm:aspect-square overflow-hidden rounded-lg shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
                 <Image
                   src="/images/engagements/keynote-featured.jpg"
                   alt="Sean Perryman delivering keynote"
@@ -89,7 +89,7 @@ export function SpeakingHero() {
               </div>
 
               {/* Floating event badge */}
-              <div className="absolute -bottom-4 -left-4 rounded-lg bg-white px-4 py-3 shadow-xl">
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-lg bg-white px-3 py-2 shadow-xl md:-bottom-4 md:left-0 md:translate-x-0 md:-ml-4 md:px-4 md:py-3">
                 <p className="text-xs font-medium text-text-muted">Recent Keynote</p>
                 <p className="font-heading font-semibold text-text-primary">
                   {SPEAKING_ENGAGEMENTS[0].event}
@@ -244,20 +244,22 @@ export function SpeakingMain() {
           </motion.div>
 
           {/* Photo - Right Side */}
-          <motion.div variants={fadeInUp} className="flex items-center">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg shadow-xl">
-              <Image
-                src="/images/engagements/panel-iapp-privacy.jpeg"
-                alt="Sean Perryman at IAPP Privacy Summit"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="font-heading text-sm font-semibold text-white">
-                  IAPP Privacy Summit
-                </p>
+          <motion.div variants={fadeInUp} className="flex items-center justify-center">
+            <div className="mx-auto w-full max-w-[280px] md:max-w-sm lg:max-w-none">
+              <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden rounded-lg shadow-xl">
+                <Image
+                  src="/images/engagements/panel-iapp-privacy.jpeg"
+                  alt="Sean Perryman at IAPP Privacy Summit"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 280px, (max-width: 1024px) 384px, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="font-heading text-sm font-semibold text-white">
+                    IAPP Privacy Summit
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -280,13 +282,13 @@ export function SpeakingCTA() {
         <div className="overflow-hidden rounded-2xl bg-background-dark shadow-2xl">
           <div className="grid lg:grid-cols-5">
             {/* Image side - takes 2 of 5 columns */}
-            <div className="relative hidden overflow-hidden lg:col-span-2 lg:block">
+            <div className="relative h-32 overflow-hidden sm:h-40 lg:col-span-2 lg:h-auto">
               <Image
                 src="/images/engagements/panel-trustworthy-ai.jpeg"
                 alt="Sean Perryman on Building Trustworthy AI panel"
                 fill
                 className="object-cover object-[30%_center]"
-                sizes="(max-width: 1024px) 0vw, 320px"
+                sizes="(max-width: 1024px) 100vw, 320px"
               />
             </div>
 
