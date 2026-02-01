@@ -1,8 +1,8 @@
 export const SITE_CONFIG_SEO = {
   name: "Sean Perryman",
   fullName: "Sean A. Perryman",
-  title: "AI Policy & Governance Advisor",
-  role: "AI Policy & Governance Advisor",
+  title: "AI Strategist and Advisor",
+  role: "AI Strategist and Advisor",
   description:
     "Sean Perryman is an AI policy and governance advisor offering strategic consulting, executive coaching, and public speaking on responsible AI.",
   url: "https://seanaperryman.com",

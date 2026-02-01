@@ -118,7 +118,7 @@ function ConsultingHero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
               </div>
 
-              <div className="absolute -bottom-4 -left-4 rounded-lg bg-white px-4 py-3 shadow-xl">
+              <div className="absolute -bottom-4 -left-4 hidden rounded-lg bg-white px-4 py-3 shadow-xl md:block">
                 <p className="text-xs font-medium text-text-muted">
                   AI Action Summit
                 </p>

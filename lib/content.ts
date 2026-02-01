@@ -505,7 +505,7 @@ export const ABOUT_PAGE = {
   },
   bio: [
     // First paragraph uses ABOUT_CONTENT.bio (already centralized above)
-    "His career spans Capitol Hill, Silicon Valley, and law school classrooms. As Counsel to the late Congressman Elijah Cummings, Sean advised on the early regulatory debates that shaped how Congress thinks about facial recognition, algorithmic accountability, and technology governance.",
+    "As Counsel to the late Congressman Elijah Cummings, Sean advised on the early regulatory debates that shaped how Congress thinks about facial recognition, algorithmic accountability, and technology governance.",
     "What distinguishes Sean\u2019s work is his ability to move fluidly between worlds that rarely speak the same language. He\u2019s equally comfortable briefing C-suite executives, testifying before lawmakers, or teaching first-year law students.",
   ],
   bioNewsletterText:
