@@ -30,7 +30,7 @@ export const CAREER_HIGHLIGHTS = [
     iconName: "Briefcase" as const,
     title: "Global Head of AI Policy at Uber",
     description:
-      "Created Uber's first EU Algorithmic Transparency Report and served as core team member on Uber's first Civil Rights Assessment.",
+      "Uber's first Head of AI Policy; Authored Uber's first EU Algorithmic Transparency Report.",
   },
   {
     iconName: "Users" as const,
