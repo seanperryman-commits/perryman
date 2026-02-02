@@ -11,7 +11,6 @@ import {
   LuGraduationCap,
   LuUsers,
   LuPresentation,
-  LuCircleCheck,
 } from "react-icons/lu";
 import { fadeInUp, staggerContainer, scaleUp, slideInLeft, slideInRight } from "@/styles/animations";
 import { Section } from "@/components/ui/Section";
@@ -19,7 +18,6 @@ import { Button } from "@/components/ui/Button";
 import {
   CONSULTING_CLIENT_TYPES,
   CONSULTING_OFFERINGS,
-  CONSULTING_OUTCOMES,
   CONSULTING_HERO,
   CONSULTING_SECTIONS,
 } from "@/lib/content";
@@ -255,64 +253,6 @@ function OfferingsSection() {
             </motion.div>
           );
         })()}
-      </motion.div>
-    </Section>
-  );
-}
-
-function CaseStudySection() {
-  return (
-    <Section background="light" padding="lg">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={staggerContainer}
-        className="mx-auto max-w-4xl"
-      >
-        <div className="overflow-hidden rounded-2xl bg-background-dark">
-          <div className="p-8 lg:p-12">
-            <motion.p
-              variants={fadeInUp}
-              className="text-sm font-medium uppercase tracking-widest text-accent"
-            >
-              {CONSULTING_SECTIONS.caseStudy.label}
-            </motion.p>
-
-            <motion.h2
-              variants={fadeInUp}
-              className="mt-4 font-heading text-[length:var(--text-h2)] font-semibold text-white"
-            >
-              {CONSULTING_SECTIONS.caseStudy.heading}
-            </motion.h2>
-
-            <motion.p
-              variants={fadeInUp}
-              className="mt-4 text-[length:var(--text-body)] text-text-on-dark-muted"
-            >
-              {CONSULTING_SECTIONS.caseStudy.description}
-            </motion.p>
-
-            <motion.div
-              variants={fadeInUp}
-              className="mt-8 grid gap-4 sm:grid-cols-2"
-            >
-              {CONSULTING_OUTCOMES.map((outcome) => (
-                <div key={outcome} className="flex items-center gap-3">
-                  <LuCircleCheck className="h-5 w-5 shrink-0 text-accent" />
-                  <span className="text-sm text-white">{outcome}</span>
-                </div>
-              ))}
-            </motion.div>
-
-            <motion.p
-              variants={fadeInUp}
-              className="mt-8 text-sm italic text-text-on-dark-muted"
-            >
-              {CONSULTING_SECTIONS.caseStudy.attribution}
-            </motion.p>
-          </div>
-        </div>
       </motion.div>
     </Section>
   );

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { SERVICES, SITE_CONFIG } from "@/lib/constants";
+import { SERVICES } from "@/lib/constants";
 import { SpeakingContent } from "@/components/sections/SpeakingContent";
 import { ConsultingContent } from "@/components/sections/ConsultingContent";
 import { CoachingContent } from "@/components/sections/CoachingContent";
