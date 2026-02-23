@@ -8,10 +8,12 @@ import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { CONTACT_PAGE, CONTACT_FAQ } from "@/lib/content";
 import { EXTERNAL_LINKS } from "@/lib/constants";
+import { FAQSchema } from "@/components/structured-data";
 
 export default function ContactPage() {
   return (
     <>
+      <FAQSchema items={CONTACT_FAQ} />
       {/* Page Header - Dark Navy */}
       <Section background="dark" padding="lg">
         <motion.div

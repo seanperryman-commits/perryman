@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/site-config";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description:
-    "Strategic consulting, public speaking, and executive coaching on AI policy, governance, and responsible technology.",
-};
+export const metadata = buildPageMetadata(
+  "Services",
+  "Strategic consulting, public speaking, and executive coaching on AI policy, governance, and responsible technology.",
+  "/services",
+);
 
 export default function ServicesLayout({
   children,

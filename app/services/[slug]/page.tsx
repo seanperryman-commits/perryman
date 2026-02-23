@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SERVICES } from "@/lib/constants";
+import { buildPageMetadata, SITE_CONFIG_SEO } from "@/lib/site-config";
+import { ServiceSchema, BreadcrumbSchema } from "@/components/structured-data";
 import { SpeakingContent } from "@/components/sections/SpeakingContent";
 import { ConsultingContent } from "@/components/sections/ConsultingContent";
 import { CoachingContent } from "@/components/sections/CoachingContent";
@@ -29,7 +31,7 @@ const SERVICE_METADATA: Record<string, { title: string; description: string }> =
   "coaching": {
     title: "Executive Coaching",
     description:
-      "Personalized guidance for executives navigating AI decisions with confidence.",
+      "One-on-one executive coaching for leaders navigating AI strategy, governance decisions, and organizational transformation with confidence.",
   },
 };
 
@@ -46,10 +48,7 @@ export async function generateMetadata({
     };
   }
 
-  return {
-    title: meta.title,
-    description: meta.description,
-  };
+  return buildPageMetadata(meta.title, meta.description, `/services/${slug}`);
 }
 
 export default async function ServiceDetailPage({
@@ -62,14 +61,37 @@ export default async function ServiceDetailPage({
     notFound();
   }
 
-  switch (slug) {
-    case "public-speaking":
-      return <SpeakingContent />;
-    case "consulting":
-      return <ConsultingContent />;
-    case "coaching":
-      return <CoachingContent />;
-    default:
-      notFound();
-  }
+  const meta = SERVICE_METADATA[slug];
+  const serviceUrl = `${SITE_CONFIG_SEO.url}/services/${slug}`;
+
+  const content = (() => {
+    switch (slug) {
+      case "public-speaking":
+        return <SpeakingContent />;
+      case "consulting":
+        return <ConsultingContent />;
+      case "coaching":
+        return <CoachingContent />;
+      default:
+        notFound();
+    }
+  })();
+
+  return (
+    <>
+      <ServiceSchema
+        name={meta.title}
+        description={meta.description}
+        url={serviceUrl}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: SITE_CONFIG_SEO.url },
+          { name: "Services", url: `${SITE_CONFIG_SEO.url}/services` },
+          { name: meta.title, url: serviceUrl },
+        ]}
+      />
+      {content}
+    </>
+  );
 }

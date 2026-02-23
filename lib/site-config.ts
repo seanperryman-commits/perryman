@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 export const SITE_CONFIG_SEO = {
   name: "Sean Perryman",
   fullName: "Sean A. Perryman",
@@ -24,3 +26,38 @@ export const SITE_CONFIG_SEO = {
     "Sean Perryman",
   ],
 } as const;
+
+export function buildPageMetadata(
+  title: string,
+  description: string,
+  path: string,
+): Metadata {
+  const url = `${SITE_CONFIG_SEO.url}${path}`;
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${title} | ${SITE_CONFIG_SEO.name}`,
+      description,
+      url,
+      siteName: SITE_CONFIG_SEO.name,
+      type: "website",
+      locale: "en_US",
+      images: [
+        {
+          url: SITE_CONFIG_SEO.ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${SITE_CONFIG_SEO.name} — ${title}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${SITE_CONFIG_SEO.name}`,
+      description,
+      images: [SITE_CONFIG_SEO.ogImage],
+    },
+  };
+}

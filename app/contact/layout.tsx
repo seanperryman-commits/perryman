@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/site-config";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Get in touch with Sean Perryman for AI policy consulting, speaking engagements, or executive coaching.",
-};
+export const metadata = buildPageMetadata(
+  "Contact",
+  "Get in touch with Sean Perryman for AI policy consulting, speaking engagements, or executive coaching.",
+  "/contact",
+);
 
 export default function ContactLayout({
   children,
