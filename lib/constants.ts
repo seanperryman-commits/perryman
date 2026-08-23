@@ -40,7 +40,7 @@ export const EXTERNAL_LINKS = {
 
 export const SITE_CONFIG = {
   name: "Sean Perryman",
-  title: "Speaker. Consultant. Strategist. Coach.",
+  title: "Consultant. Strategist. Speaker. Coach.",
   email: "sean@perrymanconsulting.com",
 } as const;
 
@@ -125,7 +125,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   },
   "consulting": {
     heroSubtitle:
-      "Strategic clarity for organizations navigating the messy reality of AI implementation—where ethics, regulation, and competitive advantage collide.",
+      "Strategic clarity for organizations navigating the reality of AI implementation.",
     overview: {
       title: "Translating AI Policy Into Business Strategy",
       paragraphs: [

@@ -9,7 +9,7 @@
 
 export const HERO_CONTENT = {
   name: "Sean Perryman",
-  title: "Speaker. Consultant. Strategist. Coach.",
+  title: "Consultant. Strategist. Speaker. Coach.",
   tagline: "AI Strategy, Policy, and Ethics",
   primaryCTA: "Schedule a Consultation",
   secondaryCTA: "Learn More",
@@ -21,7 +21,7 @@ export const HERO_CONTENT = {
 // =============================================================================
 
 export const ABOUT_CONTENT = {
-  bio: "Sean Perryman works at the intersection of AI policy, corporate strategy, and ethical implementation—helping organizations navigate one of the most consequential technology transitions of our time. His career spans Capitol Hill, Silicon Valley, and law school classrooms. He translates congressional intent for engineers, explains technical constraints to policymakers, and helps executives understand when ethical concerns are actually business risks in disguise.",
+  bio: "Sean Perryman works at the intersection of AI policy, corporate strategy, and ethical implementation. His career spans Capitol Hill, Silicon Valley, and law school classrooms. He translates congressional intent for engineers, explains technical constraints to policymakers, and helps executives understand when ethical concerns are actually business risks in disguise.",
   image: "/images/headshots/sean-formal.jpg",
 } as const;
 
@@ -30,7 +30,7 @@ export const CAREER_HIGHLIGHTS = [
     iconName: "Briefcase" as const,
     title: "Global Head of AI Policy at Uber",
     description:
-      "Uber's first Head of AI Policy; Authored Uber's first EU Algorithmic Transparency Report.",
+      "Uber's first Head of AI Policy; Authored Uber's first US and EU Algorithmic Transparency Reports.",
   },
   {
     iconName: "Users" as const,
@@ -199,15 +199,15 @@ export const VALUE_PROPOSITION = {
     {
       heading: "Translating AI Policy Into Business Strategy",
       paragraphs: [
-        "For over a decade, Sean Perryman has worked where technology policy, corporate strategy, and ethical implementation intersect. He doesn\u2019t just analyze what regulations mean\u2014he helps you understand what they mean for your business. How will compliance requirements impact your product timeline? Where do cost-saving algorithms create legal or reputational risk? Sean connects policy to the strategic and ethical questions leaders are actually wrestling with.",
-        "From advising Congress on AI accountability to creating Uber\u2019s first EU algorithmic transparency report, Sean has an unusual breadth of knowledge on the AI ecosystem, spanning policy expertise, strategic foresight, and hands-on implementation experience.",
-        "He helps leaders cut through the noise to understand what actually matters\u2014and how to act on it.",
+        "For over a decade, Sean Perryman has worked where technology policy, corporate strategy, and ethical implementation intersect. How will compliance requirements impact your product timeline? Where do cost-saving algorithms create legal or reputational risk? Sean connects policy to the strategic and ethical questions leaders are actually wrestling with.",
+        "From advising Congress on AI accountability to creating Uber\u2019s first algorithmic transparency reports, Sean has an unique breadth of knowledge on the AI ecosystem, spanning policy expertise, strategic foresight, and hands-on implementation experience.",
+        "He helps leaders to understand what actually matters\u2014and how to act on it.",
       ],
     },
     {
       heading: "Strategic Clarity in a Complex Landscape",
       paragraphs: [
-        "Sean works with organizations navigating the messy reality of AI implementation\u2014where ethics, regulation, competitive advantage, and risk all collide. His approach combines regulatory insight, strategic thinking, and practical experience to help you make better decisions faster.",
+        "Sean works with organizations navigating the reality of AI implementation. His approach combines regulatory insight, strategic thinking, and practical experience to help you make better decisions faster.",
         "Whether you\u2019re a Fortune 500 company navigating AI regulation, a startup building responsible systems from the ground up, or an academic institution developing curriculum, Sean translates complex policy into actionable strategy.",
       ],
     },
@@ -417,7 +417,7 @@ export const CONSULTING_HERO = {
   headingLine1: "Translating AI Policy",
   headingAccent: "Into Business Strategy",
   description:
-    "Strategic clarity for organizations navigating the messy reality of AI implementation\u2014where ethics, regulation, competitive advantage, and risk all collide.",
+    "Strategic clarity for organizations navigating the messy reality of AI implementation.",
   ctaText: "Start a Conversation",
 } as const;
 
@@ -425,7 +425,7 @@ export const CONSULTING_SECTIONS = {
   process: {
     heading: "What You Get",
     description:
-      "Sean works with organizations navigating the messy reality of AI implementation\u2014where ethics, regulation, competitive advantage, and risk all collide. His approach combines regulatory insight, strategic thinking, and practical experience.",
+      "Sean works with organizations navigating the messy reality of AI implementation.",
     callouts: [
       {
         title: "Ethical Clarity in Ambiguous Situations",
