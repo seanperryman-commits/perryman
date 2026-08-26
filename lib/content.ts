@@ -327,7 +327,7 @@ export const SPEAKING_SECTIONS = {
   cta: {
     heading: "Book Sean for Your Event",
     description:
-      "Expert briefings and educational talks tailored to your audience\u2014whether board members, technical teams, or industry conferences. Complex topics made digestible and actionable.",
+      "Expert briefings and educational talks tailored to your audience regardless of whether its board members, technical teams, or industry conferences. Complex topics made digestible and actionable.",
     bullets: [
       'Keynotes that audiences call \u201Cimmediately actionable\u201D',
       "Executive workshops and team education",
@@ -371,13 +371,13 @@ export const CONSULTING_OFFERINGS = [
     iconName: "Target" as const,
     title: "Strategy & Risk Assessment",
     description:
-      "Understanding where AI creates value and where it creates liability\u2014and how to tell the difference. Frameworks that help your organization move forward confidently.",
+      "Understanding where AI creates value and where it creates liability and how to tell the difference. Frameworks that help your organization move forward confidently.",
   },
   {
     iconName: "Compass" as const,
     title: "Policy Translation",
     description:
-      "Making sense of the global patchwork of AI regulations\u2014from the EU AI Act to state-level requirements. Position ahead of compliance deadlines rather than scrambling.",
+      "Making sense of the global patchwork of AI regulations like the EU AI Act to state-level requirements. Position ahead of compliance deadlines rather than scrambling.",
   },
   {
     iconName: "Scale" as const,
@@ -430,7 +430,7 @@ export const CONSULTING_SECTIONS = {
       {
         title: "Ethical Clarity in Ambiguous Situations",
         description:
-          "Sean specializes in the gray areas\u2014the ethical questions that don\u2019t have obvious answers. He helps organizations think through tradeoffs and make defensible decisions when there\u2019s no perfect option.",
+          "Sean specializes in the gray areas. He works with organizations on he ethical questions that don\u2019t have obvious answers. He helps organizations think through tradeoffs and make defensible decisions when there\u2019s no perfect option.",
       },
       {
         title: "Regulatory Foresight, Not Just Compliance",
@@ -440,7 +440,7 @@ export const CONSULTING_SECTIONS = {
       {
         title: "Implementation Experience, Not Just Theory",
         description:
-          "Sean doesn\u2019t just advise\u2014he\u2019s built these systems. From creating transparency frameworks at scale to designing academic programs, he brings a practitioner\u2019s perspective.",
+          "Sean doesn\u2019t just advise. He has practical experience working with complex systems. From creating transparency frameworks at scale to designing academic programs, he brings a practitioner\u2019s perspective.",
       },
     ],
   },
@@ -517,8 +517,8 @@ export const ABOUT_PAGE = {
     heading: "My Approach",
     paragraphs: [
       "Sean doesn\u2019t offer easy answers to hard questions. Instead, he provides frameworks for thinking through complexity, anticipating where regulation is headed, and making decisions that balance innovation with accountability.",
-      'His clients describe him as \u201Crefreshingly pragmatic\u201D about ethics\u2014someone who understands that perfect solutions rarely exist, but better decisions always do.',
-      "Sean specializes in the gray areas\u2014the ethical questions that don\u2019t have obvious answers. He helps organizations think through tradeoffs, anticipate stakeholder concerns, and make defensible decisions when there\u2019s no perfect option.",
+      'His clients describe him as \u201Crefreshingly pragmatic\u201D. He is someone who understands that perfect solutions rarely exist, but better decisions always do.',
+      "Sean specializes in the gray areas and the ethical questions that don\u2019t have obvious answers. He helps organizations think through tradeoffs, anticipate stakeholder concerns, and make defensible decisions when there\u2019s no perfect option.",
     ],
   },
   quote: "Perfect solutions rarely exist, but better decisions always do.",
