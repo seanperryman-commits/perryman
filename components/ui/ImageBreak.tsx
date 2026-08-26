@@ -21,7 +21,7 @@ export function ImageBreak({ src, alt, caption, objectPosition = "center" }: Ima
       variants={fadeInUp}
       className="relative w-full"
     >
-      <div className="relative h-64 w-full overflow-hidden md:h-80 lg:h-96">
+      <div className="relative h-48 w-full overflow-hidden sm:h-64 md:h-80 lg:h-96">
         <Image
           src={src}
           alt={alt}

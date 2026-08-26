@@ -76,7 +76,7 @@ export function OptimizedImage({
   preset = "card",
   sizes,
   quality,
-  aspectRatio,
+  aspectRatio: _aspectRatio,
   fill = false,
   className,
   alt,

@@ -32,6 +32,9 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_CONFIG_SEO.fullName }],
   creator: SITE_CONFIG_SEO.fullName,
   publisher: SITE_CONFIG_SEO.fullName,
+  alternates: {
+    canonical: SITE_CONFIG_SEO.url,
+  },
   formatDetection: {
     email: false,
     telephone: false,

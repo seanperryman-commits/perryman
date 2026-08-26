@@ -49,7 +49,7 @@ export function Header() {
           <span className="font-heading text-xl font-semibold text-text-primary">
             Sean Perryman
           </span>
-          <span className="text-xs text-text-muted">
+          <span className="text-sm text-text-muted">
             {SITE_CONFIG.title}
           </span>
         </Link>
@@ -57,20 +57,20 @@ export function Header() {
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-6 md:flex">
           {/* Social Icons */}
-          <div className="flex items-center gap-3 border-r border-border pr-6">
+          <div className="flex items-center gap-1 border-r border-border pr-6">
             {SOCIAL_LINKS.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-muted transition-colors hover:text-accent"
+                className="flex h-11 w-11 items-center justify-center text-text-muted transition-colors hover:text-accent"
                 aria-label={social.label}
               >
                 {social.icon === "linkedin" ? (
-                  <SiLinkedin className="h-4 w-4" />
+                  <SiLinkedin className="h-5 w-5" />
                 ) : (
-                  <SiX className="h-4 w-4" />
+                  <SiX className="h-5 w-5" />
                 )}
               </a>
             ))}
@@ -218,14 +218,14 @@ export function Header() {
             </Button>
           </Link>
           {/* Mobile Social Icons */}
-          <div className="flex items-center gap-4 pt-4 border-t border-border">
+          <div className="flex items-center gap-2 pt-4 border-t border-border">
             {SOCIAL_LINKS.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-muted transition-colors hover:text-accent"
+                className="flex h-11 w-11 items-center justify-center text-text-muted transition-colors hover:text-accent"
                 aria-label={social.label}
               >
                 {social.icon === "linkedin" ? (
